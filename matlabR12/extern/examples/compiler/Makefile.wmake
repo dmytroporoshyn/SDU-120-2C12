@@ -1,0 +1,83 @@
+#
+# file : Makefile (NT--Watcom)
+#
+#  Example of a stand-alone makefile for compiler-generated M files
+#
+#  $Revision: 1.2 $
+#
+
+#
+# Define directories
+#
+MATLABROOT=c:\matlab
+#
+# Defaults
+#
+MCC=$(MATLABROOT)\bin\mcc
+MEX=dll
+#
+
+MEX_TARGETS=squibo.$(MEX) tridi.$(MEX) earth.$(MEX) houdini.$(MEX) collect.$(MEX)
+#
+# It's important that MRANK gets built before MRANKP, since MRANK has
+# a dependency on MRANK.M to build MRANK.C as does MRANKP.  however,
+# MRANKP doesn't build MRANK.C only MRANK does.  so it's important
+# that MRANK builds first, so that MRANK.C is up to date by the time
+# MRANKP builds with it
+#
+STAND_ALONE_TARGETS=mrank.exe mrankp.exe multargp.exe hello.exe mr.exe
+
+TARGETS=$(MEX_TARGETS) $(STAND_ALONE_TARGETS)
+
+all: $(TARGETS)
+
+squibo.$(MEX) : squibo.m
+	$(MCC) -x $[@ -o $^&
+
+tridi.$(MEX) : tridi.m
+	$(MCC) -x $[@ -o $^&
+
+earth.$(MEX) : earth.m
+	$(MCC) -x $[@ -o $^&
+
+houdini.$(MEX) : houdini.m
+	$(MCC) -x $[@ -o $^&
+
+collect.$(MEX) : collect.m measure.c
+	$(MCC) -x collect.m measure.c -o $^&
+
+mrank.exe: main.m mrank.m
+	$(MCC) -m main.m mrank.m -o $^&
+	@rm -f *.obj 
+
+mrankp.exe: mrankp.c mrank.c
+	$(MCC) -m mrankp.c mrank.c -o $^&
+	@rm -f *.obj 
+
+multargp.exe: multargp.c multarg.m
+	$(MCC) -t -h -T link:exe multargp.c multarg.m -o $^&
+	@rm -f *.obj
+
+hello.exe: hello.m 
+	$(MCC) -m hello.m -o $^&
+	@rm -f *.obj 
+
+mr.exe: mr.m mrank.m myph.c
+	$(MCC) -t -L C -W main -T link:exe mr.m mrank.m myph.c -o $^& 
+	@rm -f *.obj 
+
+clean: .SYMBOLIC
+	rm -f $(TARGETS)
+
+reallyclean: .SYMBOLIC
+	rm -f $(TARGETS)                     	&
+              squibo_mex.c squibo.h squibo.c 	&
+              tridi_mex.c tridi.h tridi.c    	&
+	      earth_mex.c earth.h earth.c    	&
+	      houdini_mex.c houdini.h houdini.c &
+	      collect_mex.c collect.h collect.c collect_external.h  &
+              mrank.h mrank.c                   &
+              main_main.c main.h main.c       	&
+              multarg.h multarg.c		&
+   	      hello.h hello.c hello_main.c      &
+   	      mr.h mr.c mr_external.h mr_main.c 

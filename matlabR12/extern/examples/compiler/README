@@ -1,0 +1,102 @@
+
+This readme is intended for the Matlab Compiler release version 2.0
+
+$Revision: 1.4 $
+
+                               README
+
+The files in this directory fall into two categories:
+
+   * Example source code files; some are written as M-files and 
+     some are written in the C language. 
+   * Files to help you build and configure the source code files into 
+     stand-alone external applications.
+
+The "MATLAB Compiler User's Guide" details most of the files in this
+directory.  
+
+
+                   *******************************
+                      EXAMPLE SOURCE CODE FILES
+                   *******************************
+
+The Makefile found in this directory will build the following
+applications on UNIX.  The user needs to modify the MATLABROOT
+environment variable found in the Makefile to indicate the appropriate
+location of root directory of MATLAB.
+
+squibo.m: A Sample M-File
+-------------------------
+
+The "MATLAB Compiler User's Guide" details various ways to compile squibo.m. 
+This M-file calculates "squibonacci" numbers, which are a variant of Fibonacci
+numbers.
+
+Compile squibo.m into a MEX-file by typing:
+
+   unix> mcc -x squibo.m 
+
+
+tridi.m: Another Sample M-file
+------------------------------
+
+tridi.m solves a tridiagonal system of equations.
+
+Compile tridi.m into an MEX-file by typing:
+
+   unix> mcc -x tridi.m
+
+NOTE: The "MATLAB Compiler User's Guide" does not detail this example.  
+      It does, however, provide an excellent example of the speed 
+      advantages of the compiler.  Try running this example as an M-file.
+      Then, compile the M-file into a MEX-file (in V1.2 mode with
+      "-ir") and see how much faster it runs.  To build a MEX-file in
+      1.2 mode start up MATLAB and type the following commands:
+
+   >> mcc -V1.2 -ir tridi.m
+
+main.m and mrank.m: Build Two M-Files Into a Stand-Alone External Application
+-----------------------------------------------------------------------------
+
+Chapter 5 of the "MATLAB Compiler User's Guide" explains how to build 
+two M-files into a stand-alone external application.  The two sample
+M-files are: 
+
+   * main.m, which is a function M-file that calls mrank. 
+   * mrank.m, which is a function M-file that calculates the rank of
+     n magic squares.
+
+See the "MATLAB Compiler User's Guide" for details on building this 
+application.
+
+
+mrank.m and mrankp.c: Build an M-File and C file into a Stand-Alone
+-------------------------------------------------------------------
+
+Chapter 5 of the "MATLAB Compiler User's Guide" explains how to build 
+an M-file and C file into a stand-alone external application.  A simple
+example M-file and C file combination is: 
+
+   * mrankp.c, which is a main C function that calls mrank and prints the
+     results returned by mrank.
+   * mrank.m, which is a function M-file that calculates the rank of
+     n magic squares.
+
+See the "MATLAB Compiler User's Guide" for details on building this 
+application.
+
+
+multargp.c and multarg.m: Advanced Example
+-----------------------------------------
+
+Chapter 5 of the "MATLAB Compiler User's Guide" describes a more complicated
+example of coding a stand-alone external application.  The sample files
+in this example are:
+
+   * multargp.c, which is a C function that calls multarg and prints
+     the results returned by multarg.
+   * multarg.m, which is a function M-file that contains two input and 
+     two output arguments.
+
+See the "MATLAB Compiler User's Guide" for details on building this 
+application.

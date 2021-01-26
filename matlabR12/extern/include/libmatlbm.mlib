@@ -1,0 +1,5147 @@
+/*
+ * $Revision: 1.29 $
+ */
+/*
+ * Copyright (c) 1984-1998 by The MathWorks, Inc.
+ * All Rights Reserved.
+ */
+
+target="C";
+include="libmatlbm.h";
+timestamp="Wed Feb 16 13:46:19 EST 2000";
+
+
+_colonobj {             /* m function name */
+  nin     = 3;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  mexonly;
+  builtin;
+  cname   = mlf_colonobj;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+_license_checkout {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  varargout;        /* vargout used */
+  mexonly;
+  builtin;
+  cname   = mlf_license_checkout;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+_system {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlf_system;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+abs {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfAbs;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+acos {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfAcos;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+acosh {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfAcosh;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+add_block {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  mexonly;
+  builtin;
+  cname   = mlfAdd_block;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+add_line {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  mexonly;
+  builtin;
+  cname   = mlfAdd_line;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+all {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfAll;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+and {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfAnd;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+any {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfAny;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+applescript {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  varargout;        /* vargout used */
+  mexonly;
+  builtin;
+  cname   = mlfApplescript;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+asin {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfAsin;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+asinh {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfAsinh;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+assignin {             /* m function name */
+  nin     = 3;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  mexonly;
+  builtin;
+  cname   = mlfAssignin;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+atan {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfAtan;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+atanh {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfAtanh;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+atan2 {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfAtan2;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+axes {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  hg_function;
+  cname   = mlfAxes;  /* mxArray in and out */
+  cname   = mlfNaxes;  /* used nargout */
+  cname   = mlfVaxes;  /* output ignored */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 1;      /* nargout used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+balance {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 2;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfBalance;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+beep {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfBeep;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+bitand {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfBitand;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+bitcmp {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfBitcmp;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+bitget {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfBitget;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+bitset {             /* m function name */
+  nin     = 3;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfBitset;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+bitshift {             /* m function name */
+  nin     = 3;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfBitshift;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+bitor {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfBitor;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+bitxor {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfBitxor;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+builtin {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  varargout;        /* vargout used */
+  builtin;
+  cname   = mlfBuiltin;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+callstats {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  varargout;        /* vargout used */
+  mexonly;
+  builtin;
+  cname   = mlfCallstats;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+cat {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  cname   = mlfCat;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+cd {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfCd;  /* mxArray in and out */
+  cname   = mlfNcd;  /* used nargout */
+  cname   = mlfVcd;  /* output ignored */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 1;      /* nargout used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+ceil {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfCeil;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+cell {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  cname   = mlfCell;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+cell2struct {             /* m function name */
+  nin     = 3;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfCell2struct;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+cellhorzcat {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  cname   = mlfCellhorzcat;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+cellvertcat {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  nolib;
+  cname   = mlfCellvertcat;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+cells {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  nolib;
+  cname   = mlfCells;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+char {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  cname   = mlfChar;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+chdir {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfChdir;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+chol {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 2;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfChol;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+cholinc {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 2;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfCholinc;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+cholupdate {             /* m function name */
+  nin     = 3;      /* number of M inputs */
+  nout    = 2;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfCholupdate;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+class {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfClassName;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+clc {             /* m function name */
+  nin     = 0;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfClc;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+clear {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  nolib;
+  cname   = mlfClear;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+clock {             /* m function name */
+  nin     = 0;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfClock;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+close_system {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  mexonly;
+  builtin;
+  cname   = mlfClose_system;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+colon {             /* m function name */
+  nin     = 3;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfColon;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+computer {             /* m function name */
+  nin     = 0;      /* number of M inputs */
+  nout    = 2;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfComputer;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+conj {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfConj;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+conv2 {             /* m function name */
+  nin     = 4;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfConv2;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+contourc {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  hg_function;
+  cname   = mlfContourc;  /* mxArray in and out */
+  cname   = mlfNcontourc;  /* used nargout */
+  cname   = mlfVcontourc;  /* output ignored */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 1;      /* nargout used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+copyobj {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  hg_function;
+  cname   = mlfCopyobj;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+cos {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfCos;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+ctranspose {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfCtranspose;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+cosh {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfCosh;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+cumprod {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfCumprod;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+cumsum {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfCumsum;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+cputime {             /* m function name */
+  nin     = 0;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfCputime;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+dbclear {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  mexonly;
+  builtin;
+  cname   = mlfDbclear;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+dbcont {             /* m function name */
+  nin     = 0;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  mexonly;
+  builtin;
+  cname   = mlfDbcont;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+dbdown {             /* m function name */
+  nin     = 0;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  mexonly;
+  builtin;
+  cname   = mlfDbdown;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+dbquit {             /* m function name */
+  nin     = 0;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  mexonly;
+  builtin;
+  cname   = mlfDbquit;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+dbstack {             /* m function name */
+  nin     = 0;      /* number of M inputs */
+  nout    = 2;      /* number of M outputs */
+  scope   = global;
+  mexonly;
+  builtin;
+  cname   = mlfDbstack;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+dbstatus {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  cname   = mlfDbstatus;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+dbstep {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  mexonly;
+  builtin;
+  cname   = mlfDbstep;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+dbstop {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  mexonly;
+  builtin;
+  cname   = mlfDbstop;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+dbtype {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  mexonly;
+  builtin;
+  cname   = mlfDbtype;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+dbup {             /* m function name */
+  nin     = 0;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  mexonly;
+  builtin;
+  cname   = mlfDbup;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+delete {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  cname   = mlfDelete;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+delete_block {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  mexonly;
+  builtin;
+  cname   = mlfDelete_block;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+delete_line {             /* m function name */
+  nin     = 3;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  mexonly;
+  builtin;
+  cname   = mlfDelete_line;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+det {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfDet;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+diag {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfDiag;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+diary {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  mexonly;
+  builtin;
+  cname   = mlfDiary;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+diff {             /* m function name */
+  nin     = 3;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfDiff;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+dir {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfDir;  /* mxArray in and out */
+  cname   = mlfNdir;  /* used nargout */
+  cname   = mlfVdir;  /* output ignored */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 1;      /* nargout used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+disp {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfDisp;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+display{
+  nin    = 1;       /* number of M inputs */
+  nout   = 0;       /* number of M outputs */
+  scope  = global;
+  cname  = mlfPrintMatrix;   /* mxArray in and out */
+  nargin = 0;       /* nargin  not used */
+  nargout= 0;       /* nargout not used */
+  reqin  = 1;       /* minimum number of inputs */
+  reqout = 0;       /* minimum number of outputs */
+}
+
+dongarra {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfDongarra;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+double {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfDouble;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+dos {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 2;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfDos;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+dragrect {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  hg_function;
+  cname   = mlfDragrect;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+drawnow {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  hg_function;
+  cname   = mlfDrawnow;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+echo {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  mexonly;
+  builtin;
+  cname   = mlfEcho;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+edt {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  varargout;        /* vargout used */
+  mexonly;
+  builtin;
+  cname   = mlfEdt;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+end {             /* m function name */
+  nin     = 3;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfEnd;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+eig {             /* m function name */
+  nin     = 3;      /* number of M inputs */
+  nout    = 2;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfEig;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+eps {             /* m function name */
+  nin     = 0;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfEps;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+eq {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfEq;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+error {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfError;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+errorstat {             /* m function name */
+  nin     = 0;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  mexonly;
+  builtin;
+  cname   = mlfErrorstat;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+errortrap {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  mexonly;
+  builtin;
+  cname   = mlfErrortrap;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+eval {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargout;        /* vargout used */
+  builtin;
+  cname   = mlfEval;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+evalc {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargout;        /* vargout used */
+  builtin;
+  mexonly;
+  cname   = mlfEvalc;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+evalin {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargout;        /* vargout used */
+  mexonly;
+  builtin;
+  cname   = mlfEvalin;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 1;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+exist {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfExist;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+exit {             /* m function name */
+  nin     = 0;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfExit;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+exp {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfExp;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+expm {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfExpm;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+eye {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfEye;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+fclose {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfFclose;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+feature {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfFeature;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 1;      /* nargout used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+fieldnames {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfFieldnames;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+fields {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  varargout;        /* vargout used */
+  mexonly;
+  builtin;
+  cname   = mlfFields;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+feof {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfFeof;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+ferror {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 2;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfFerror;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+feval {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  varargout;        /* vargout used */
+  builtin;
+  cname   = mlfFeval;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+fft {             /* m function name */
+  nin     = 3;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfFft;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+fftn {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfFftn;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+fftw {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfFftw;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+fgets {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 2;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfFgets;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+figure {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  hg_function;
+  cname   = mlfFigure;  /* mxArray in and out */
+  cname   = mlfNfigure;  /* used nargout */
+  cname   = mlfVfigure;  /* output ignored */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 1;      /* nargout used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+fill {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  hg_function;
+  cname   = mlfFill;  /* mxArray in and out */
+  cname   = mlfNfill;  /* used nargout */
+  cname   = mlfVfill;  /* output ignored */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 1;      /* nargout used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+fill3 {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  hg_function;
+  cname   = mlfFill3;  /* mxArray in and out */
+  cname   = mlfNfill3;  /* used nargout */
+  cname   = mlfVfill3;  /* output ignored */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 1;      /* nargout used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+filter {             /* m function name */
+  nin     = 5;      /* number of M inputs */
+  nout    = 2;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfFilter;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+find {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 3;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfFind;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+find_system {
+  nin     = 1;
+  nout    = 1;
+  scope   = global;
+  varargin;
+  varargout;
+  mexonly;
+  builtin;
+  cname   = mlfFind_system;
+}
+
+findobj {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  hg_function;
+  cname   = mlfFindobj;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+findstr {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfFindstr;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+finite {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfFinite;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+fix {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfFix;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+floor {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfFloor;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+flops {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfFlops;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+format {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfFormat;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+fopen {             /* m function name */
+  nin     = 3;      /* number of M inputs */
+  nout    = 3;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfFopen;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+fprintf {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  cname   = mlfFprintf;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 1;      /* nargout used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+frame2im {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 2;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  hg_function;
+  cname   = mlfFrame2im;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+fread {             /* m function name */
+  nin     = 4;      /* number of M inputs */
+  nout    = 2;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfFread;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+fschange {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  varargout;        /* vargout used */
+  mexonly;
+  builtin;
+  cname   = mlfFschange;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+fscanf {             /* m function name */
+  nin     = 3;      /* number of M inputs */
+  nout    = 2;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfFscanf;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+fseek {             /* m function name */
+  nin     = 3;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfFseek;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+ftell {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfFtell;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+full {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfFull;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+func2str {          /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfFunc2str;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+functions {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfFunctions;  /* mxArray in and out */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+functionscalled {             /* m function name */
+  nin     = 5;      /* number of M inputs */
+  nout    = 3;      /* number of M outputs */
+  scope   = global;
+  mexonly;
+  builtin;
+  cname   = mlfFunctionscalled;  /* mxArray in and out */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+fwrite {             /* m function name */
+  nin     = 4;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfFwrite;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+ge {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfGe;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+get {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  hg_function;
+  cname   = mlfGet;  /* mxArray in and out */
+  cname   = mlfNget;  /* used nargout */
+  cname   = mlfVget;  /* output ignored */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 1;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+get_param {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  mexonly;
+  builtin;
+  cname   = mlfGet_param;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+getenv {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfGetenv;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+getframe {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 2;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  hg_function;
+  cname   = mlfGetframe;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+global {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  nolib;
+  cname   = mlfGlobal;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+gt {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfGt;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+handle2struct {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  hg_function;
+  cname   = mlfHandle2struct;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+hcreate {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  varargout;        /* vargout used */
+  mexonly;
+  builtin;
+  cname   = mlfHcreate;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+hardcopy {             /* m function name */
+  nin     = 3;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  hg_function;
+  cname   = mlfHardcopy;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+help {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  mexonly;
+  builtin;
+  cname   = mlfHelp;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+hittest {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  hg_function;
+  cname   = mlfHittest;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+home {             /* m function name */
+  nin     = 0;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  mexonly;
+  builtin;
+  cname   = mlfHome;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+hess {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 2;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfHess;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+horzcat {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  cname   = mlfHorzcat;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+hregister {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  mexonly;
+  builtin;
+  cname   = mlfHregister;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+i {             /* m function name */
+  nin     = 0;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfI;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+j {             /* m function name */
+  nin     = 0;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfJ;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+ifftn{
+  nin    = 2;       /* number of M inputs */
+  nout   = 1;       /* number of M outputs */
+  scope  = global;
+  builtin;
+  cname  = mlfIfftn;   /* mxArray in and out */
+  nargin = 0;       /* nargin  not used */
+  nargout= 0;       /* nargout not used */
+  reqin  = 1;       /* minimum number of inputs */
+  reqout = 1;       /* minimum number of outputs */
+}
+
+ifft{
+  nin    = 3;       /* number of M inputs */
+  nout   = 1;       /* number of M outputs */
+  scope  = global;
+  builtin;
+  cname  = mlfIfft;   /* mxArray in and out */
+  nargin = 0;       /* nargin  not used */
+  nargout= 0;       /* nargout not used */
+  reqin  = 1;       /* minimum number of inputs */
+  reqout = 1;       /* minimum number of outputs */
+}
+
+
+im2frame {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  hg_function;
+  cname   = mlfIm2frame;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+imag {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfImag;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+image {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  hg_function;
+  cname   = mlfImage;  /* mxArray in and out */
+  cname   = mlfNimage;  /* used nargout */
+  cname   = mlfVimage;  /* output ignored */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 1;      /* nargout used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+inf {             /* m function name */
+  nin     = 0;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfInf;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+Inf {             /* m function name */
+  nin     = 0;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfInf;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+inferiorto {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  mexonly;
+  builtin;
+  cname   = mlfInferiorto;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+inmem {             /* m function name */
+  nin     = 0;      /* number of M inputs */
+  nout    = 2;      /* number of M outputs */
+  scope   = global;
+  mexonly;
+  builtin;
+  cname   = mlfInmem;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+input {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfInput;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+inputname {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfInputname;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+int8 {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfInt8;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+int16 {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfInt16;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+int32 {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfInt32;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+inv {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfInv;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+isa {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfIsa;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+isequal {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  cname   = mlfIsequal;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+isempty {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfIsempty;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+isfinite {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfIsfinite;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+isglobal {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  mexonly;
+  builtin;
+  cname   = mlfIsglobal;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+ishandle {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  hg_function;
+  cname   = mlfIshandle;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+isjava {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  mexonly;
+  builtin;
+  cname   = mlfIsjava;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+issparse {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfIssparse;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+ischar {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfIschar;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+islogical {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfIslogical;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+isstr {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfIsstr;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+isstudent {             /* m function name */
+  nin     = 0;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfIsstudent;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+isinf {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfIsinf;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+isletter {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfIsletter;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+isnan {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfIsnan;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+isreal {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfIsreal;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+isruntime {             /* m function name */
+  nin     = 0;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  mexonly;
+  builtin;
+  cname   = mlfIsruntime;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+isspace {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfIsspace;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+java {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  varargout;        /* vargout used */
+  mexonly;
+  builtin;
+  cname   = mlfJava;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+/**************************************************/
+/* java_method and java_object are here temporarily
+ * in orded to break a job dependency.  They should
+ * be removed once javaMethod and javaObject are in 
+ * MATLAB in perfect BWB 5/5/00 */
+
+java_array   {
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  mexonly;
+  builtin;
+  cname   = mlfJava_array;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+java_method {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  mexonly;
+  builtin;
+  cname   = mlfJava_method;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+java_object {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  mexonly;
+  builtin;
+  cname   = mlfJava_object;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+/*************************************************/
+
+
+javaArray {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  mexonly;
+  builtin;
+  cname   = mlfJavaArray;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+javaMethod {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  mexonly;
+  builtin;
+  cname   = mlfJavaMethod;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+javaObject {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  mexonly;
+  builtin;
+  cname   = mlfJavaObject;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+keyboard {             /* m function name */
+  nin     = 0;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  mexonly;
+  builtin;
+  cname   = mlfKeyboard;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+lastwarn {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfLastwarn;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+lasterr {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfLasterr;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+light {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  hg_function;
+  cname   = mlfLight;  /* mxArray in and out */
+  cname   = mlfNlight;  /* used nargout */
+  cname   = mlfVlight;  /* output ignored */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 1;      /* nargout used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+length {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfLength;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+ldivide {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfLdivide;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+le {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfLe;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+license {             /* m function name */
+  nin     = 0;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfLicense;  /* mxArray in and out */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+linmod {             /* m function name */
+  nin     = 4;      /* number of M inputs */
+  nout    = 4;      /* number of M outputs */
+  scope   = global;
+  mexonly;
+  builtin;
+  cname   = mlfLinmod;  /* mxArray in and out */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+line {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  hg_function;
+  cname   = mlfLine;  /* mxArray in and out */
+  cname   = mlfNline;  /* used nargout */
+  cname   = mlfVline;  /* output ignored */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 1;      /* nargout used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+load {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  nolib;
+  cname   = mlfLoad;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+load_ {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  nolib;
+  cname   = mlfLoad_;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+loadc_ {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  nolib;
+  cname   = mlfLoadc_;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+log {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfLog;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+log2 {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 2;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfLog2;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+logical {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfLogical;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+loglog {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  hg_function;
+  cname   = mlfLoglog;  /* mxArray in and out */
+  cname   = mlfNloglog;  /* used nargout */
+  cname   = mlfVloglog;  /* output ignored */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 1;      /* nargout used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+lookfor {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  mexonly;
+  builtin;
+  cname   = mlfLookfor;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+lower {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfLower;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+lt {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfLt;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+ltitr {             /* m function name */
+  nin     = 4;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfLtitr;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+lu {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 3;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfLu;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+luinc {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 3;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfLuinc;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+macprint {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  mexonly;
+  builtin;
+  cname   = mlfMacprint;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+mactools {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  varargout;        /* vargout used */
+  mexonly;
+  builtin;
+  cname   = mlfMactools;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+matlabpath {
+    nin=1;
+    nout=1;
+    nargin=1;
+    nargout=1;
+    cname=mlfMatlabpath;
+    varargin;
+    varargout;
+    builtin;
+    mexonly;
+    scope=global;
+}
+
+matlabroot {             /* m function name */
+  nin     = 0;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfMatlabroot;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+max {             /* m function name */
+  nin     = 3;      /* number of M inputs */
+  nout    = 2;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfMax;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+mbchar{
+  nin    = 1;       /* number of M inputs */
+  nout   = 0;       /* number of M outputs */
+  scope  = global;
+  cname  = mlfMbchar;   /* mxArray in and out */
+  builtin;
+  nargin = 0;       /* nargin  not used */
+  nargout= 0;       /* nargout not used */
+  reqin  = 1;       /* minimum number of inputs */
+  reqout = 0;       /* minimum number of outputs */
+}
+
+mbint{
+  nin    = 1;       /* number of M inputs */
+  nout   = 0;       /* number of M outputs */
+  scope  = global;
+  cname  = mlfMbint;   /* mxArray in and out */
+  builtin;
+  nargin = 0;       /* nargin  not used */
+  nargout= 0;       /* nargout not used */
+  reqin  = 1;       /* minimum number of inputs */
+  reqout = 0;       /* minimum number of outputs */
+}
+
+mbreal{
+  nin    = 1;       /* number of M inputs */
+  nout   = 0;       /* number of M outputs */
+  scope  = global;
+  cname  = mlfMbreal;   /* mxArray in and out */
+  builtin;
+  nargin = 0;       /* nargin  not used */
+  nargout= 0;       /* nargout not used */
+  reqin  = 1;       /* minimum number of inputs */
+  reqout = 0;       /* minimum number of outputs */
+}
+
+mbscalar{
+  nin    = 1;       /* number of M inputs */
+  nout   = 0;       /* number of M outputs */
+  scope  = global;
+  cname  = mlfMbscalar;   /* mxArray in and out */
+  builtin;
+  nargin = 0;       /* nargin  not used */
+  nargout= 0;       /* nargout not used */
+  reqin  = 1;       /* minimum number of inputs */
+  reqout = 0;       /* minimum number of outputs */
+}
+
+mbvector{
+  nin    = 1;       /* number of M inputs */
+  nout   = 0;       /* number of M outputs */
+  scope  = global;
+  cname  = mlfMbvector;   /* mxArray in and out */
+  builtin;
+  nargin = 0;       /* nargin  not used */
+  nargout= 0;       /* nargout not used */
+  reqin  = 1;       /* minimum number of inputs */
+  reqout = 0;       /* minimum number of outputs */
+}
+
+methods {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  mexonly;
+  builtin;
+  cname   = mlfMethods;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+mexext {             /* m function name */
+  nin     = 0;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfMexext;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+mfilename {             /* m function name */
+  nin     = 0;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfMfilename;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+mimofr {             /* m function name */
+  nin     = 5;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfMimofr;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+min {             /* m function name */
+  nin     = 3;      /* number of M inputs */
+  nout    = 2;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfMin;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+minus {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfMinus;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+mislocked {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  mexonly;
+  builtin;
+  cname   = mlfMislocked;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+mlock {             /* m function name */
+  nin     = 0;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  mexonly;
+  builtin;
+  cname   = mlfMlock;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+mldivide {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfMldivide;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+mpower {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfMpower;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+mrdivide {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfMrdivide;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+mtimes {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfMtimes;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+more {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  mexonly;
+  builtin;
+  cname   = mlfMore;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+movie {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  hg_function;
+  cname   = mlfMovie;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+munlock {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  mexonly;
+  builtin;
+  cname   = mlfMunlock;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+NaN {             /* m function name */
+  nin     = 0;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfNan;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+nan {             /* m function name */
+  nin     = 0;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfNan;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+nargin {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfNargin;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+nargout {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfNargout;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+ndims {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfNdims;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+ne {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfNe;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+neq {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfNeq;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+new_system {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  mexonly;
+  builtin;
+  cname   = mlfNew_system;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+norm {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfNorm;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+not {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfNot;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+numel {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfNumel;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+ones {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  cname   = mlfOnes;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+open_system {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  mexonly;
+  builtin;
+  cname   = mlfOpen_system;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+or {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfOr;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+pack {             /* m function name */
+  nin     = 0;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  mexonly;
+  builtin;
+  cname   = mlfPack;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+patch {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  hg_function;
+  cname   = mlfPatch;  /* mxArray in and out */
+  cname   = mlfNpatch;  /* used nargout */
+  cname   = mlfVpatch;  /* output ignored */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 1;      /* nargout used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+pause {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfPause;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+persistent {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  nolib;
+  cname   = mlfPersistent;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+pfile {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  mexonly;
+  builtin;
+  cname   = mlfPfile;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+permute {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfPermute;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+pi {             /* m function name */
+  nin     = 0;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfPi;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+plot {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  hg_function;
+  cname   = mlfPlot;  /* mxArray in and out */
+  cname   = mlfNplot;  /* used nargout */
+  cname   = mlfVplot;  /* output ignored */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 1;      /* nargout used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+plot3 {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  hg_function;
+  cname   = mlfPlot3;  /* mxArray in and out */
+  cname   = mlfNplot3;  /* used nargout */
+  cname   = mlfVplot3;  /* output ignored */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 1;      /* nargout used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+plus {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfPlus;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+pow2 {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfPow2;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+prod {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfProd;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+power {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfPower;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+qr {             /* m function name */
+  nin     = 3;      /* number of M inputs */
+  nout    = 3;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfQr;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+qrupdate {             /* m function name */
+  nin     = 4;      /* number of M inputs */
+  nout    = 2;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfQrupdate;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+quit {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfQuit;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+qz {             /* m function name */
+  nin     = 3;      /* number of M inputs */
+  nout    = 5;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfQz;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+rand {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  cname   = mlfRand;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 1;      /* nargout used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+randn {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  cname   = mlfRandn;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 1;      /* nargout used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+rbbox {             /* m function name */
+  nin     = 3;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  hg_function;
+  cname   = mlfRbbox;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+rcond {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfRcond;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+rdivide {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfRdivide;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+real {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfReal;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+rectangle {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  hg_function;
+  cname   = mlfRectangle;  /* mxArray in and out */
+  cname   = mlfNrectangle;  /* used nargout */
+  cname   = mlfVrectangle;  /* output ignored */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 1;      /* nargout used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+rehash {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  mexonly;
+  builtin;
+  cname   = mlfRehash;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+rem {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfRem;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+reset {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  hg_function;
+  cname   = mlfReset;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+reshape {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  cname   = mlfReshape;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+rmappdata {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  hg_function;
+  cname   = mlfRmappdata;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+round {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfRound;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+runtime {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  mexonly;
+  builtin;
+  cname   = mlfRuntime;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+save {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  nolib;
+  cname   = mlfSave;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+schur {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 2;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfSchur;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+selectmoveresize {             /* m function name */
+  nin     = 0;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  hg_function;
+  cname   = mlfSelectmoveresize;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+semilogx {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  hg_function;
+  cname   = mlfSemilogx;  /* mxArray in and out */
+  cname   = mlfNsemilogx;  /* used nargout */
+  cname   = mlfVsemilogx;  /* output ignored */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 1;      /* nargout used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+semilogy {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  hg_function;
+  cname   = mlfSemilogy;  /* mxArray in and out */
+  cname   = mlfNsemilogy;  /* used nargout */
+  cname   = mlfVsemilogy;  /* output ignored */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 1;      /* nargout used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+set {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  hg_function;
+  cname   = mlfSet;  /* mxArray in and out */
+  cname   = mlfNset;  /* used nargout */
+  cname   = mlfVset;  /* output ignored */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 1;      /* nargout used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+setappdata {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  hg_function;
+  cname   = mlfSetappdata;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+set_param {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  mexonly;
+  builtin;
+  cname   = mlfSet_param;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+setstr {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfSetstr;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+sign {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfSign;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+sim {             /* m function name */
+  nin     = 4;      /* number of M inputs */
+  nout    = 3;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  mexonly;
+  builtin;
+  cname   = mlfSim;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+simget {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  mexonly;
+  builtin;
+  cname   = mlfSimget;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+simset {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  mexonly;
+  builtin;
+  cname   = mlfSimset;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+sin {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfSin;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+single {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfSingle;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+sinh {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfSinh;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+size {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargout;        /* vargout used */
+  builtin;
+  cname   = mlfSize;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+size2d {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 2;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfSize2d;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+sldebug {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  mexonly;
+  builtin;
+  cname   = mlfSldebug;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+sort {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 2;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfSort;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+sparse {             /* m function name */
+  nin     = 6;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfSparse;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+sparsfun {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 5;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  cname   = mlfSparsfun;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+sprintf {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 2;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  cname   = mlfSprintf;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+sqrt {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfSqrt;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+sscanf {             /* m function name */
+  nin     = 3;      /* number of M inputs */
+  nout    = 4;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfSscanf;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+str2func {          /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfStr2func;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+string {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  nolib;
+  cname   = mlfString;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+strrep {             /* m function name */
+  nin     = 3;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfStrrep;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+strcmp {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfStrcmp;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+strcmpi {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfStrcmpi;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+strncmp {             /* m function name */
+  nin     = 3;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfStrncmp;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+strncmpi {             /* m function name */
+  nin     = 3;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfStrncmpi;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+struct {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  cname   = mlfStruct;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+struct2cell {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfStruct2cell;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+struct2handle {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  hg_function;
+  cname   = mlfStruct2handle;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+subsasgn {             /* m function name */
+  nin     = 3;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfSubsasgn;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+subsindex {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfSubsindex;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+subsref {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  varargout;
+  cname   = mlfSubsref;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+sum {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfSum;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+superiorto {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  mexonly;
+  builtin;
+  cname   = mlfSuperiorto;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+surface {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  hg_function;
+  cname   = mlfSurface;  /* mxArray in and out */
+  cname   = mlfNsurface;  /* used nargout */
+  cname   = mlfVsurface;  /* output ignored */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 1;      /* nargout used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+svd {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 3;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfSvd;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+system_dependent {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 3;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  mexonly;
+  builtin;
+  cname   = mlfSystem_dependent;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+tan {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfTan;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+tanh {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfTanh;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+text {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  hg_function;
+  cname   = mlfText;  /* mxArray in and out */
+  cname   = mlfNtext;  /* used nargout */
+  cname   = mlfVtext;  /* output ignored */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 1;      /* nargout used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+times {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfTimes;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+transpose {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfTranspose;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+trmginput {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  varargout;        /* vargout used */
+  mexonly;
+  builtin;
+  cname   = mlfTrmginput;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+tril {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfTril;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+triu {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfTriu;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+type {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  mexonly;
+  builtin;
+  cname   = mlfType;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+u_new {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  mexonly;
+  builtin;
+  hg_function;
+  cname   = mlfU_new;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+u_set {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  mexonly;
+  builtin;
+  hg_function;
+  cname   = mlfU_set;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+u_get {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  mexonly;
+  builtin;
+  hg_function;
+  cname   = mlfU_get;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+u_find {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  mexonly;
+  builtin;
+  hg_function;
+  cname   = mlfU_find;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+u_copy {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  mexonly;
+  builtin;
+  hg_function;
+  cname   = mlfU_copy;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+u_up {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  mexonly;
+  builtin;
+  hg_function;
+  cname   = mlfU_up;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+u_down {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  mexonly;
+  builtin;
+  hg_function;
+  cname   = mlfU_down;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+u_left {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  mexonly;
+  builtin;
+  hg_function;
+  cname   = mlfU_left;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+u_right {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  mexonly;
+  builtin;
+  hg_function;
+  cname   = mlfU_right;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+u_delete {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  mexonly;
+  builtin;
+  hg_function;
+  cname   = mlfU_delete;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+u_isa {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  mexonly;
+  builtin;
+  hg_function;
+  cname   = mlfU_isa;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+u_properties {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  mexonly;
+  builtin;
+  hg_function;
+  cname   = mlfU_properties;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+u_subprop {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  mexonly;
+  builtin;
+  hg_function;
+  cname   = mlfU_subprop;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+u_findapp {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  mexonly;
+  builtin;
+  hg_function;
+  cname   = mlfU_findapp;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+u_findclass {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  mexonly;
+  builtin;
+  hg_function;
+  cname   = mlfU_findclass;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+u_findprop {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  mexonly;
+  builtin;
+  hg_function;
+  cname   = mlfU_findprop;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+u_findevent {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  mexonly;
+  builtin;
+  hg_function;
+  cname   = mlfU_findevent;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+u_findtype {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  mexonly;
+  builtin;
+  hg_function;
+  cname   = mlfU_findtype;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+u_findroot {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  mexonly;
+  builtin;
+  hg_function;
+  cname   = mlfU_findroot;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+u_convert_to_gobject {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  mexonly;
+  builtin;
+  hg_function;
+  cname   = mlfU_convert_to_gobject;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+u_undo {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  mexonly;
+  builtin;
+  hg_function;
+  cname   = mlfU_undo;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+u_redo {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  mexonly;
+  builtin;
+  hg_function;
+  cname   = mlfU_redo;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+u_commit {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  mexonly;
+  builtin;
+  hg_function;
+  cname   = mlfU_commit;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+uicontrol {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  hg_function;
+  cname   = mlfUicontrol;  /* mxArray in and out */
+  cname   = mlfNuicontrol;  /* used nargout */
+  cname   = mlfVuicontrol;  /* output ignored */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 1;      /* nargout used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+uicontextmenu {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  hg_function;
+  cname   = mlfUicontextmenu;  /* mxArray in and out */
+  cname   = mlfNuicontextmenu;  /* used nargout */
+  cname   = mlfVuicontextmenu;  /* output ignored */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 1;      /* nargout used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+uigetfile {             /* m function name */
+  nin     = 4;      /* number of M inputs */
+  nout    = 2;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  hg_function;
+  cname   = mlfUigetfile;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+uiputfile {             /* m function name */
+  nin     = 4;      /* number of M inputs */
+  nout    = 2;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  hg_function;
+  cname   = mlfUiputfile;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+uisetcolor {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  hg_function;
+  cname   = mlfUisetcolor;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+uisetfont {             /* m function name */
+  nin     = 2;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  hg_function;
+  cname   = mlfUisetfont;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+uimenu {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  hg_function;
+  cname   = mlfUimenu;  /* mxArray in and out */
+  cname   = mlfNuimenu;  /* used nargout */
+  cname   = mlfVuimenu;  /* output ignored */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 1;      /* nargout used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+uimenufcn {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  hg_function;
+  cname   = mlfUimenufcn;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+uint8 {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfUint8;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+uint16 {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfUint16;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+uint32 {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfUint32;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+uipushtool {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  hg_function;
+  cname   = mlfUipushtool;  /* mxArray in and out */
+  cname   = mlfNuipushtool;  /* used nargout */
+  cname   = mlfVuipushtool;  /* output ignored */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 1;      /* nargout used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+uitoggletool {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  hg_function;
+  cname   = mlfUitoggletool;  /* mxArray in and out */
+  cname   = mlfNuitoggletool;  /* used nargout */
+  cname   = mlfVuitoggletool;  /* output ignored */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 1;      /* nargout used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+uitoolbar {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  hg_function;
+  cname   = mlfUitoolbar;  /* mxArray in and out */
+  cname   = mlfNuitoolbar;  /* used nargout */
+  cname   = mlfVuitoolbar;  /* output ignored */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 1;      /* nargout used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+uminus {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfUminus;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+unaryminus {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfUnaryminus;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+uplus {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfUplus;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+upper {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfUpper;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+unix {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 2;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfUnix;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+version {             /* m function name */
+  nin     = 0;      /* number of M inputs */
+  nout    = 2;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfVersion;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+vertcat {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  cname   = mlfVertcat;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+vms {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 2;      /* number of M outputs */
+  scope   = global;
+  mexonly;
+  builtin;
+  cname   = mlfVms;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+waitfor {             /* m function name */
+  nin     = 3;      /* number of M inputs */
+  nout    = 0;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  hg_function;
+  cname   = mlfWaitfor;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+waitforbuttonpress {             /* m function name */
+  nin     = 0;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  hg_function;
+  cname   = mlfWaitforbuttonpress;  /* mxArray in and out */
+  cname   = mlfNwaitforbuttonpress;  /* used nargout */
+  cname   = mlfVwaitforbuttonpress;  /* output ignored */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 1;      /* nargout used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+warning {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 2;      /* number of M outputs */
+  scope   = global;
+  builtin;
+  cname   = mlfWarning;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 1;      /* nargout used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 0;      /* minimum number of outputs */
+}
+
+which {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  mexonly;
+  builtin;
+  cname   = mlfWhich;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+who {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  mexonly;
+  builtin;
+  cname   = mlfWho;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+whos {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  mexonly;
+  builtin;
+  cname   = mlfWhos;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+what {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  mexonly;
+  builtin;
+  cname   = mlfWhat;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+xlate {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  varargout;        /* vargout used */
+  builtin;
+  cname   = mlfXlate;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 1;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+
+zeros {             /* m function name */
+  nin     = 1;      /* number of M inputs */
+  nout    = 1;      /* number of M outputs */
+  scope   = global;
+  varargin;         /* vargin used */
+  builtin;
+  cname   = mlfZeros;  /* mxArray in and out */
+  nargin  = 0;      /* nargin  not used */
+  nargout = 0;      /* nargout not used */
+  reqin   = 0;      /* minimum number of inputs */
+  reqout  = 1;      /* minimum number of outputs */
+}
+

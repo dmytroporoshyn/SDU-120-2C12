@@ -1,0 +1,25 @@
+% $Revision: 1.1 $
+
+README for the v1.2 MATLAB C Math Library examples directory
+
+This directory contains the code for the example programs described in
+the MATLAB C Math Library documentation.
+
+ex1.c -- Creating and Printing Arrays
+ex2.c -- Writing Simple Functions
+ex3.c -- Calling Library Routines
+ex4.c -- Handling Errors
+ex5.c -- Saving and Loading Data
+ex6.c -- Passing Functions as Arguments
+
+To build the examples, use the mbuild utility, located in the
+$MATLAB/bin directory.  If you've never used mbuild before, you'll
+need to run 
+
+% mbuild -setup
+
+to set up mbuild correctly for your C compiler. See 
+
+% mbuild -help
+
+for more details on mbuild.

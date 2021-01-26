@@ -1,0 +1,650 @@
+#include "SDU.h"
+#include <fstream.h>
+
+
+
+const double po = 3.9859e14;
+const double p2 = -1.77e25;
+//-----\/----\/----\/----МЕТОДЫ КЛАССА TSDU-----\/----\/----\/----
+TSDU::TSDU()
+{
+    ifstream file("Resources\\Cx_Vrt.dat");
+    for(int i=0;i<120;++i)
+    file>>Cxm[i];
+    file.close();
+
+    ifstream file1("Resources\\mx_wx.dat");
+    for(int i=0;i<19;++i)
+    {
+      file1>>mx_wx[i][0];
+      file1>>mx_wx[i][1];
+    }
+    file1.close();
+
+    ifstream file2("Resources\\H_y.dat");
+    for(int i=0;i<320;++i)
+    file2>>h_y[i];
+    file2.close();
+
+    ifstream file3("Resources\\K1.dat");
+    for(int tetai=0;tetai<12;++tetai)
+    for(int ci=0;ci<11;++ci)
+    for(int voi=0;voi<12;++voi)
+    file3>>k1mas[tetai][voi][ci];
+    file3.close();
+
+    vomas[0]=200;
+    vomas[1]=300;
+    vomas[2]=400;
+    vomas[3]=500;
+    vomas[4]=600;
+    vomas[5]=800;
+    vomas[6]=1000;
+    vomas[7]=1200;
+    vomas[8]=1400;
+    vomas[9]=1600;
+    vomas[10]=1800;
+    vomas[11]=2000.1;
+
+    cmas[0]=0;
+    cmas[1]=0.2;
+    cmas[2]=0.4;
+    cmas[3]=0.6;
+    cmas[4]=0.8;
+    cmas[5]=1;
+    cmas[6]=2;
+    cmas[7]=3;
+    cmas[8]=4;
+    cmas[9]=5;
+    cmas[10]=6.1;
+
+    t=&var2[_t];
+    x=&var2[_x];
+    y=&var2[_y];
+    z=&var2[_z];
+    v=&var2[_v];
+    teta=&var2[_teta];
+    psi=&var2[_psi];
+    pi=&var2[_pi];
+
+    funs[_x]=&TSDU::xf;
+    funs[_y]=&TSDU::yf;
+    funs[_z]=&TSDU::zf;
+    funs[_v]=&TSDU::vf;
+    funs[_teta]=&TSDU::tetaf;
+    funs[_psi]=&TSDU::psif;
+    funs[_pi]=&TSDU::pif;
+}
+
+double TSDU::xf()
+{
+    return (*v)*cos(*teta)*cos(*psi);
+}
+
+double TSDU::yf()
+{
+    return (*v)*sin(*teta);
+}
+
+double TSDU::zf()
+{
+    return (*v)*cos(*teta)*sin(*psi);
+}
+
+double TSDU::vf()
+{
+    vars[10] = ap;
+    vars[11] = ax*cos_gamma;
+    vars[12] = gg*sin(*teta);
+    vars[13] = Kv*Fxk/mo;
+    vars[14] = Kv*gom*(cos(Bsh)*cos(ag-(*psi))*cos(*teta)+sin(Bsh)*sin(*teta));
+    return ap-ax*cos_gamma-gg*sin(*teta)+Kv*Fxk/mo-0.001*Kv*gom*(cos(Bsh)*cos(ag-(*psi))*cos(*teta)+sin(Bsh)*sin(*teta));
+}
+
+double TSDU::tetaf()
+{
+    double r_obr = 1/(Rz+(*y));
+
+    vars[15] = ax*sin(*teta)*Wx/((*v)*(*v));
+	vars[16] = gg*cos(*teta)/(*v); 
+    vars[17] = Kv*Fyk/((*v)*mo);
+    vars[18] = Kv*gom/(*v)*(cos(Bsh)*cos(ag-(*psi))*sin(*teta)+sin(Bsh)*cos(*teta));
+    vars[19] = Kv*(*v)*r_obr*cos(*teta);
+    vars[20] = Kv*2*Omegaz*cos(Bsh)*sin(ag-(*psi));
+    return -ax*sin(*teta)*Wx/((*v)*(*v))-gg*cos(*teta)/(*v) + Kv*Fyk/((*v)*mo)-Kv*gom/(*v)*(+cos(Bsh)*cos(ag-(*psi))*sin(*teta)+sin(Bsh)*cos(*teta))-0.3*Kv*(*v)*r_obr*cos(*teta)-Kv*1.0*Omegaz*cos(Bsh)*sin(ag-(*psi));
+}
+
+double TSDU::psif()
+{
+    double r_obr = 1/(Rz+(*y));
+    vars[21] = ax*Wz/((*v)*(*v)*cos(*teta));
+    vars[22] = Kv*Fzk/mo/(*v)/cos(*teta);
+    vars[23] = Kv*gom/(*v)*cos(Bsh)*sin(ag-(*psi))/cos(*teta);
+    vars[24] = Kv*(*v)*r_obr*tan(Bsh)*sin(ag-(*psi))*cos(*teta);
+    vars[25] = Kv*2*Omegaz*(cos(Bsh)*cos(ag-(*psi))*tan(*teta)-sin(Bsh));
+    return -ax*Wz/((*v)*(*v)*cos(*teta)) - Kv*Fzk/mo/(*v)/cos(*teta)+Kv*gom/(*v)*cos(Bsh)*sin(ag-(*psi))/cos(*teta)+Kv*0.9*(*v)*r_obr*tan(Bsh)*sin(ag-(*psi))*cos(*teta)+Kv*2*Omegaz*(cos(Bsh)*cos(ag-(*psi))*tan(*teta)-sin(Bsh));}
+
+double TSDU::pif()
+{
+    return -(*pi)*yf()/(R*tauy);
+}
+
+double TSDU::tauf(double y)
+{
+        if(y<=9324)return 289-6.328e-3*y;
+        if(y<=12000)return 230-6.328e-3*(y-9324)+(1.172e-6)*(y-9324)*(y-9324);
+	return 221.5;
+
+}
+
+double TSDU::Cxf(double vrtau)
+{
+    if(vrtau>1300)return 0.26;
+    else
+    if(vrtau<200)return 0;
+    else
+    {
+        int des=(((int)vrtau)%100)/10;
+        int sot=(int)vrtau/100;
+        int i=(sot-2)*10+des;
+        double proc=(vrtau-100*sot-10*des)/10;
+        return Cxm[i]+(Cxm[i+1]-Cxm[i])*proc;
+    }
+}
+
+void TSDU::calcconst()
+{
+    mo=(qo)/go;
+    W2=Wx*Wx+Wz*Wz;
+    A3=0.474*i*d*d/(qo+dq);
+
+    double va0 = pow( (v0*v0+2*v0*Omegaz*Rz*cos(Bsh)*cos(teta0)*sin(ag)+Omegaz*Omegaz*Rz*Rz*cos(Bsh)) ,0.5);
+    double tetaa0 = asin(v0/va0*sin(teta0));
+    aa0 = acos(v0/va0*cos(teta0)*cos(ag)/cos(tetaa0));
+}
+
+void TSDU::setcoef()
+{
+    tauy=tauf(*y)+dtau;
+    vr=(*v)*sqrt(1-2*(Wx*cos(*teta)*cos(*psi)+Wz*sin(*psi)*cos(*teta))/(*v)+W2/(*v)/(*v));
+    vrtau=vr*sqrt(tauoN/tauy);
+    cos_gamma=((*v)-Wx*cos(*teta))/vr;
+    Cx=Cxf(vrtau);
+    c=i*d*d/(qo+dq)*1e3;
+    ax=k5*c*(*pi)*4.74*1e-4*vrtau*vrtau*Cx;
+    double dtz=Tz-15;
+    double wo=0;
+    double mu=wo/(go*mo*(tauoN+K2*dtz));
+    ap=wo*(K1*dtz)/(mo*(tauoN+K2*dtz)*(1-mu));
+	gg=-po/(Rz*Rz)-3*p2/(2*Rz*Rz*Rz*Rz)*(5*sin(Bsh)*sin(Bsh)-1)+Omegaz*Omegaz*Rz;
+	gg=-gg;
+	gom=3*p2/(Rz*Rz*Rz*Rz)*sin(Bsh)-Omegaz*Omegaz*Rz*sin(Bsh);
+	gom=-gom;
+	//ShowMessage(Omegaz*Omegaz*Rz*sin(Bsh));
+	
+    r = pow((*x)*(*x)+(*y)*(*y)+(*z)*(*z),0.5);
+    Fxk = 0;
+    Fyk = 2*mo*(*v)*Omegaz*cos(Bsh)*sin(ag-(*psi));
+    Fzk = 2*mo*(*v)*Omegaz*(sin(Bsh)*cos(*teta)-cos(Bsh)*sin(*teta)*cos(ag-(*psi)));
+}
+
+double TSDU::Hf(double y)
+{
+    if(y<0)return 1;
+    if(y>=32000)throw "hy: y>=32000";
+    int sot=(((int)y)%1000)/100;
+    int tys=(int)y/1000;
+    int k=(tys)*10+sot;
+    double proc=(y-1000*tys-100*sot)/100;
+    if(k==319)return 0.0117;
+    return h_y[k]+(h_y[k+1]-h_y[k])*proc;
+}
+
+double TSDU::mxwxf(double M)
+{
+    if(M<mx_wx[0][0])return mx_wx[0][1];//throw "mxwx: M<min";
+    if(M>mx_wx[18][0])return mx_wx[18][1];//throw "mxwx: M>max";
+    if(M==mx_wx[0][0])return mx_wx[0][1];
+    for(int i=0;i<18;++i)
+    if(M>mx_wx[i][0] && M<=mx_wx[i+1][0])
+    {
+        double proc=(M-mx_wx[i][0])/(mx_wx[i+1][0]-mx_wx[i][0]);
+        return mx_wx[i][1]+(mx_wx[i+1][1]-mx_wx[i][1])*proc;
+    }
+    throw "mxwx: не могу вычислить mx_wx";
+}
+
+double TSDU::K1f(double tetao, double vo, double c)
+{
+    tetao=tetao*180/M_PI;
+    if(tetao<0)throw "K1: teta0<0";
+    if(tetao>62.5)tetao=62.5;//throw "K1: tetao>62.5";
+    if(vo<200)vo=200;//throw "K1: vo<200";
+    if(vo>2000)vo=2000;//throw "K1: vo>2000";
+    if(c<0)c=0;//throw "K1: c<0";
+    if(c>6)c=6;//throw "K1: c>6";
+    int tetai,voi,ci;
+    if(tetao<7.5)tetai=0;
+    else
+    tetai=int((int(tetao*10))/50)-1;
+    for(voi=0;voi<11;++voi)
+    if(vo>=vomas[voi] && vo<vomas[voi+1])
+    break;
+    for(ci=0;ci<10;++ci)
+    if(c>=cmas[ci] && c<cmas[ci+1])
+    break;
+    double procvo=(vo-vomas[voi])/(vomas[voi+1]-vomas[voi]);
+    double k1vo1=k1mas[tetai][voi][ci]+procvo*(k1mas[tetai][voi+1][ci]-k1mas[tetai][voi][ci]);
+    double k1vo2=k1mas[tetai][voi][ci+1]+procvo*(k1mas[tetai][voi+1][ci+1]-k1mas[tetai][voi][ci+1]);
+    double procc=(c-cmas[ci])/(cmas[ci+1]-cmas[ci]);
+    double ans=k1vo1+procc*(k1vo2-k1vo1);
+    return ans;
+}
+
+void TSDU::forderivacija()
+{
+    for(int i=0;i<VARNUM;++i)
+	var2[i]=var1[i];
+	setcoef();
+    ysum+=*y;
+    vsum+=*v;
+    atau=20*sqrt(tauy);
+    Mtausum+=vrtau/atau;
+    integral+=0.5*(dtetaprev+(*teta)-teta0)*dt;
+    dtetaprev=(*teta)-teta0;
+    ii++;
+}
+
+double TSDU::derivacijaf()
+{
+    ysr=2*ysum/ii;
+    c=i*d*d/qo*1e3;
+    K1=K1f(teta0,v0,c);
+    Mtausr=Mtausum/ii;
+    vsr=vsum/ii;
+    K=d*d*d*L/A/go*1e3*Hf(ysr)*mxwxf(Mtausr)*vsr;
+    K2=(exp(-K*te)-1)/(K*te*K*te)+1/K/te;
+    return -12e2*pow(c,0.7)*A/(qo*d*eta)*v0*K2/2/K1*integral;
+}
+
+void TSDU::RK4()
+{
+        //расчёт коэффициентов k1
+	for(int i=0;i<VARNUM;++i)
+	var2[i]=var1[i];
+	setcoef();
+        for(int i=1;i<VARNUM;++i)
+	k[0][i]=(this->*funs[i])();
+
+        vars[0] = var1[_t];
+        vars[1] = var1[_x];
+        vars[2] = var1[_y];
+        vars[3] = var1[_z];
+        vars[4] = var1[_v];
+        vars[5] = var1[_teta];
+        vars[6] = var1[_psi];
+        vars[7] = var1[_pi];
+
+        for (int i = 0; i < varsLength; i++) {
+            file<<vars[i]<<"\t";
+        }
+        file<<endl;
+
+	//расчёт коэффициентов k2
+	for(int i=1;i<VARNUM;++i)
+	var2[i]=var1[i]+dt/2*k[0][i];
+	var2[0]=var1[0]+dt/2;
+	setcoef();
+	for(int i=1;i<VARNUM;++i)
+	k[1][i]=(this->*funs[i])();
+
+	//расчёт коэффициентов k3
+	for(int i=1;i<VARNUM;++i)
+	var2[i]=var1[i]+dt/2*k[1][i];
+	var2[0]=var1[0]+dt/2;
+	setcoef();
+	for(int i=1;i<VARNUM;++i)
+	k[2][i]=(this->*funs[i])();
+
+	//расчёт коэффициентов k4
+	for(int i=1;i<VARNUM;++i)
+	var2[i]=var1[i]+dt*k[2][i];
+	var2[0]=var1[0]+dt;
+	setcoef();
+	for(int i=1;i<VARNUM;++i)
+	k[3][i]=(this->*funs[i])();
+
+        //расчёт следующих значений переменных
+	for(int i=1;i<VARNUM;++i)
+	var1[i]+=dt/6*(k[0][i]+2*(k[1][i]+k[2][i])+k[3][i]);
+	var1[0]+=dt;
+}
+
+void TSDU::solve()
+{
+    //throw AnsiString("метод solve нельзя использовать");
+    calcconst();
+    dt=dt1;
+
+    /*var1[_t]=0;
+	var1[_x]=x0;
+	var1[_y]=y0;
+	var1[_z]=z0;
+	var1[_v]=v0;
+	var1[_teta]=teta0;
+	var1[_psi]=psi0;
+    var1[_pi]=pi0; */
+
+    var1[_t]=0;
+    var1[_x]=x0;
+    var1[_y]=y0;
+    var1[_z]=z0;
+    var1[_v]=v0;
+    var1[_teta]=teta0;
+    var1[_psi]=psi0;
+    var1[_pi]=pi0;
+
+    do
+    {
+        RK4();
+	}while(var1[_y]<y2 && var1[_y]>0);
+    if(var1[_y]<=0)
+    goto L1;
+    do
+    {
+        RK4();
+	}while(var1[_y]>=y2);
+    dt=dt2;
+    do
+    {
+        RK4();
+    }while(var1[_y]>ymin);
+    L1:;
+    te=var1[_t];
+    xe=var1[_x];
+    ye=var1[_y];
+    ze=var1[_z];
+    ve=var1[_v];
+    tetae=var1[_teta];
+    psie=var1[_psi];
+}
+
+void TSDU::solved()
+{
+    ysum=0;
+    ysr=0;
+    Mtausum=0;
+    Mtausr=0;
+    vsum=0;
+    vsr=0;
+    dtetaprev=0;
+    ii=0;
+    integral=0;
+
+    calcconst();
+    dt=dt1;
+
+    /*var1[_t]=0;
+    var1[_x]=x0;
+    var1[_y]=y0;
+    var1[_z]=z0;
+    var1[_v]=v0;
+    var1[_teta]=teta0;
+    var1[_psi]=psi0;
+    var1[_pi]=pi0;*/
+
+    var1[_t]=0; header[0] = "t";
+    var1[_x]=x0; header[1] = "x";
+    var1[_y]=y0; header[2] = "y";
+    var1[_z]=z0; header[3] = "z";
+    var1[_v]=v0; header[4] = "v";
+    var1[_teta]=teta0; header[5] = "teta";
+    var1[_psi]=psi0; header[6] = "psi";
+    var1[_pi]=pi0; header[7] = "pi";
+
+    file.open("vars.txt");
+    for (int i = 0; i < varsLength; i++) {
+        file<<header[i].c_str()<<"\t";
+    }
+    file<<endl;
+
+    do
+    {
+        RK4();
+        forderivacija();
+	}while(var1[_y]<y2 && var1[_y]>0);
+    if(var1[_y]<=0)
+    goto L1;
+    do
+    {
+        RK4();
+        forderivacija();
+	}while(var1[_y]>y2);
+    dt=dt2;
+    do
+    {
+        RK4();
+        forderivacija();
+    }while(var1[_y]>ymin);
+    L1:;
+    te=var1[_t];
+    xe=var1[_x];
+    ye=var1[_y];
+    ze=var1[_z];
+    ve=var1[_v];
+    tetae=var1[_teta];
+    psie=var1[_psi];
+
+    file.close();
+
+    //вычисление деривации
+    Zd=derivacijaf();
+}
+//-----/\----/\----/\----МЕТОДЫ КЛАССА TSDU-----/\----/\----/\----
+
+//-----\/----\/----\/----МЕТОДЫ КЛАССА TSDUSolver-----\/----\/----\/----
+
+void TSDUSolver::setdefault()
+{
+    S.x0=0;
+    S.y0=0;
+    S.z0=0;
+    S.v0=v0;
+    S.teta0=teta0;
+    S.psi0=0;
+    S.pi0=1;
+    S.go=go;
+    S.Wx=0;
+    S.Wz=0;
+    S.R=R;
+    S.dtau=0;
+    S.i=i;
+    S.d=d;
+    S.qo=qo;
+    S.dq=0;
+    S.tauoN=tauoN;
+    S.eta=eta;
+    S.L=L;
+    S.A=A;
+    S.k5=1;
+    S.Kv=0;
+    S.Bsh=Bsh;
+    S.Omegaz=Omegaz;
+    S.ag=ag;
+    S.Rz=Rz;
+}
+
+void TSDUSolver::findi()
+{
+    double di=0.2;
+    double dxe = 0.4;
+    setdefault();
+	S.solve();
+	int e=(S.xe>D)?1:-1;
+	while(!(S.xe>=D-dxe && S.xe<=D+dxe))
+	{
+		if(S.xe>D)
+		{
+			if(e!=1)
+			{
+				e=1;
+				di/=2;
+			}
+			i+=di;
+		}
+		else
+		{
+			if(e!=-1)
+			{
+				e=-1;
+				di/=2;
+			}
+			i-=di;
+		}
+		setdefault();
+		S.solve();
+	}
+}
+
+void TSDUSolver::calculate(bool autoFindCoefFormy)
+{
+    //расчёт
+    S.ymin=0.1;
+    S.dt1=0.05;
+    S.dt2=0.001;
+    S.y2=30;
+
+    if (autoFindCoefFormy) {
+        findi();
+    }
+
+    S.header[10] = "ap";
+    S.header[11] = "ax*cos_gamma";
+    S.header[12] = "gg*sin(*teta)";
+    S.header[13] = "Fxk/mo";
+    S.header[14] = "go*(cos(Bsh)*cos(ag-(*psi))*cos(*teta)+sin(Bsh)*sin(*teta))";
+    S.header[15] = "ax*sin(*teta)*Wx/((*v)*(*v))";
+    S.header[16] = "gg*cos(*teta)/(*v)";
+    S.header[17] = "Fyk/mo";
+    S.header[18] = "gom/(*v)*(cos(Bsh)*cos(ag-(*psi))*sin(*teta)+sin(Bsh)*cos(*teta));";
+    S.header[19] = "(*v)*r_obr*cos(*teta)";
+    S.header[20] = "2*Omegaz*cos(Bsh)*sin(ag-(*psi))";
+    S.header[21] = "ax*Wz/((*v)*(*v)*cos(*teta))";
+    S.header[22] = "Fzk/mo/(*v)/cos(*teta)";
+    S.header[23] = "go/(*v)*cos(Bsh)*sin(ag-(*psi))/cos(*teta)";
+    S.header[24] = "(*v)*r_obr*tan(Bsh)*sin(ag-(*psi))*cos(*teta)";
+    S.header[25] = "2*Omegaz*(cos(Bsh)*cos(ag-(*psi))*tan(*teta)-sin(Bsh))";
+
+    //расчёт Xt,Zt,Zd
+    setdefault();
+    S.solved();
+    Xt=S.xe;
+    Yt=S.ye;
+    Zt=S.Zd;
+    tetac=S.tetae;
+    vc=S.ve;
+    tc=S.te;
+    Zd=-S.Zd/(0.001*Xt);
+   
+    //расчёт dXtys
+    setdefault();
+    S.teta0+=dteta;
+	S.solve();
+    dXtys=S.xe-Xt;
+
+    //расчёт dXw
+    setdefault();
+    S.Wx=Wx;
+	S.solve();
+    dXw=-S.xe+Xt;
+
+    //расчёт dXh
+    setdefault();
+    S.pi0=(PoN+dP)/PoN;
+	S.solve();
+    dXh=-S.xe+Xt;
+
+    //расчёт dXt
+    setdefault();
+    S.dtau=dtau;
+	S.solve();
+    dXt=-S.xe+Xt;
+
+    //расчёт dXtz
+    setdefault();
+    double dTz=Tz-15;
+	S.v0+=ltz*dTz*S.v0;
+	S.solve();
+	dXtz=-S.xe+Xt;
+
+    //расчёт dXvo
+    setdefault();
+    S.v0+=S.v0*dvo/100;
+	S.solve();
+	dXvo=-S.xe+Xt;
+
+    //расчёт dXvo1proc
+    setdefault();
+    S.v0+=S.v0*1/100;
+	S.solve();
+	dXvo1proc=-S.xe+Xt;
+
+    //расчёт dXq
+    setdefault();
+    S.dq=dq*2/3*S.qo/100;
+	S.v0-=lq*S.v0*S.dq/S.qo;
+	S.solve();
+	dXq=-S.xe+Xt;
+
+    //расчёт dZw
+    setdefault();
+    S.Wz=Wz;
+	S.solve();
+    dZw=(0-S.ze)/(0.001*S.xe);
+    
+    
+    //расчёт dXvr
+    setdefault();
+    S.Kv = 1;
+    S.solve();
+    dXvr=(S.xe-Xt);  
+
+    
+    //расчёт dZvr
+    setdefault();
+    S.Kv = 1;
+	S.solve();
+    dZvr=-(0-S.ze)/(0.001*S.xe);    
+
+    //Расчёт dXc
+    setdefault();
+    S.k5=1.01;
+    S.solve();
+    dXc=-(S.xe-Xt);
+
+    // Расчет Vd, Vdteta0,Vdv0,Vdc, Vv, Vb
+    Vdteta0=dXtys*rteta0;
+    Vdv0=dXvo*rv0;
+    Vdc=dXc*rc;
+
+    Vd=sqrt(pow(Vdteta0,2)+pow(Vdv0,2)+pow(Vdc,2));
+    Vv=Vd*tan(fabs(tetac));
+    Vb=sqrt(pow(Xt/955*rw,2)+pow((Xt*sin(teta0)*rz),2));
+
+
+    //расчёт dXr, dZr
+    S.teta0+=dteta;
+    S.Wx=Wx;
+    S.pi0=(PoN+dP)/PoN;
+    S.dtau=dtau;
+    S.v0+=ltz*dTz*S.v0;
+    S.v0+=S.v0*dvo/100;
+    S.dq=dq*2/3*S.qo/100;
+	S.v0-=lq*S.v0*S.dq/S.qo;
+    S.Wz=Wz;
+    S.solve();
+    Xr=S.xe;
+    Zr=S.ze+S.Zd; 
+}
+
+//-----/\----/\----/\----МЕТОДЫ КЛАССА TSDUSolver-----/\----/\----/\----
