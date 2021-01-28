@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 849
-  Top = 238
-  Width = 1693
+  Left = 379
+  Top = 185
+  Width = 1777
   Height = 752
   Caption = 'WarZone Shooting Tables - Mass Center'
   Color = clBtnFace
@@ -27,11 +27,11 @@ object Form1: TForm1
   object PageControl1: TPageControl
     Left = 0
     Top = 0
-    Width = 1677
+    Width = 1761
     Height = 713
-    ActivePage = TabSheet1
+    ActivePage = TabSheet4
     Align = alClient
-    TabIndex = 0
+    TabIndex = 3
     TabOrder = 0
     object TabSheet1: TTabSheet
       Caption = #1048#1089#1093#1086#1076#1085#1099#1077' '#1076#1072#1085#1085#1099#1077
@@ -63,7 +63,7 @@ object Form1: TForm1
       object GroupBox2: TGroupBox
         Left = 704
         Top = 0
-        Width = 965
+        Width = 1049
         Height = 685
         Align = alRight
         Anchors = [akLeft, akTop, akRight, akBottom]
@@ -72,7 +72,7 @@ object Form1: TForm1
         object StringGrid2: TStringGrid
           Left = 2
           Top = 15
-          Width = 961
+          Width = 1045
           Height = 668
           Align = alClient
           ColCount = 3
@@ -358,7 +358,7 @@ object Form1: TForm1
       object Panel1: TPanel
         Left = 0
         Top = 0
-        Width = 1669
+        Width = 1753
         Height = 685
         Align = alClient
         BevelOuter = bvNone
@@ -368,7 +368,7 @@ object Form1: TForm1
         object Memo1: TMemo
           Left = 16
           Top = 16
-          Width = 1637
+          Width = 1721
           Height = 653
           Align = alClient
           BevelEdges = []
@@ -554,6 +554,7 @@ object Form1: TForm1
         Height = 153
         ColCount = 8
         RowCount = 6
+        Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goEditing]
         TabOrder = 0
       end
       object StringGrid6: TStringGrid
@@ -564,6 +565,7 @@ object Form1: TForm1
         ColCount = 3
         FixedCols = 2
         RowCount = 6
+        Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goEditing]
         TabOrder = 1
       end
       object StringGrid7: TStringGrid
@@ -573,7 +575,19 @@ object Form1: TForm1
         Height = 209
         ColCount = 10
         RowCount = 8
+        Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goEditing]
         TabOrder = 2
+        ColWidths = (
+          64
+          64
+          64
+          64
+          66
+          64
+          64
+          64
+          64
+          64)
       end
       object StringGrid8: TStringGrid
         Left = 16
@@ -603,6 +617,7 @@ object Form1: TForm1
         ColCount = 4
         FixedCols = 0
         RowCount = 2
+        Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goEditing]
         TabOrder = 5
       end
       object StringGrid11: TStringGrid
