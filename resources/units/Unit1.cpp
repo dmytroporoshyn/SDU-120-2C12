@@ -1174,8 +1174,8 @@ for(int i=0;i<9;++i){
     //----------Расчет Таблицы В----------------------------------------//
 
 
-       float table_coef_row_one[10] = {50, 100, 150, 200, 250, 300, 350, 400, 450, 500};
-     float table_coef_col_one[25] = {2530, 2600, 2800, 3000, 3200, 3400, 3600, 3800, 4000, 4200, 4400, 4600, 4800, 5000, 5200, 5400, 5600, 5800, 6000, 6200, 6400, 6600, 6800, 7000, 7188};
+    float table_coef_row_one[10] = {50, 100, 150, 200, 250, 300, 350, 400, 450, 500};
+    float table_coef_col_one[25] = {2530, 2600, 2800, 3000, 3200, 3400, 3600, 3800, 4000, 4200, 4400, 4600, 4800, 5000, 5200, 5400, 5600, 5800, 6000, 6200, 6400, 6600, 6800, 7000, 7188};
     float table_coef[25][10] = {
         {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
         {1, 1, 2, 2, 2, 3, 3, 4, 4, 5},
@@ -1411,7 +1411,7 @@ void __fastcall TForm1::Save1Click(TObject *Sender)
     file99<<"<br>"<<endl;
     file99<<"<br>"<<endl;
 
-    file99<<"<center><h3>Поправочные графы</h3></center>"<<endl;
+    file99<<"<center><h3>Табл. 3 Поправочні графи</h3></center>"<<endl;
   /*  file99<<"Тета0, град,ммсс"<<"\t"
     <<"Хт, м"<<"\t"
     <<"П, тыс"<<"\t"
@@ -1504,6 +1504,36 @@ void __fastcall TForm1::Save1Click(TObject *Sender)
     file99<<temps.c_str()<<endl; ("parameters\\current_f(Mtau).txt");
 
     file99<<"</table>"<<endl;
+
+    file99<<"<center><h3>Табл. В Вирахувані дані по цілі</h3></center>"<<endl;
+    file99<<"<table align='center' border=1>"<<endl;
+        file99<<"<tr>"<<endl;
+        file99<<"<td>"
+        <<(Form1->StringGrid12->Cells[0][0].c_str())<<"</td><td>"
+        <<(Form1->StringGrid12->Cells[1][0].c_str())<<"</td><td>"
+        <<(Form1->StringGrid12->Cells[2][0].c_str())<<"</td><td>"
+        <<(Form1->StringGrid12->Cells[3][0].c_str())<<"</td><td>"
+        <<(Form1->StringGrid12->Cells[4][0].c_str())<<"</td><td>"
+        <<(Form1->StringGrid12->Cells[5][0].c_str())<<"</td><td>"
+        <<(Form1->StringGrid12->Cells[6][0].c_str())<<"</td><td>"
+        <<(Form1->StringGrid12->Cells[7][0].c_str())<<"</td><td>"
+        <<(Form1->StringGrid12->Cells[8][0].c_str())<<"</td>"<<endl;
+        file99<<"</tr>"<<endl;
+        file99<<"<tr>"<<endl;
+        file99<<"<td>"
+        <<(Form1->StringGrid12->Cells[0][1].c_str())<<"</td><td>"
+        <<(Form1->StringGrid12->Cells[1][1].c_str())<<"</td><td>"
+        <<(Form1->StringGrid12->Cells[2][1].c_str())<<"</td><td>"
+        <<(Form1->StringGrid12->Cells[3][1].c_str())<<"</td><td>"
+        <<(Form1->StringGrid12->Cells[4][1].c_str())<<"</td><td>"
+        <<(Form1->StringGrid12->Cells[5][1].c_str())<<"</td><td>"
+        <<(Form1->StringGrid12->Cells[6][1].c_str())<<"</td><td>"
+        <<(Form1->StringGrid12->Cells[7][1].c_str())<<"</td><td>"
+        <<(Form1->StringGrid12->Cells[8][1].c_str())<<"</td>"<<endl;
+        file99<<"</tr>"<<endl;
+    file99<<"</table>"<<endl;
+    file99<<"<br>"<<endl;
+    file99<<"<br>"<<endl;
 
     file99.close();
 }
