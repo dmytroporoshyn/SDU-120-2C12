@@ -39,8 +39,8 @@
     <OTHERFILES value=""/>
   </MACROS>
   <OPTIONS>
-    <IDLCFLAGS value="-Iresources\units -I$(BCB)\include -I$(BCB)\include\vcl -src_suffix cpp 
-      -D_DEBUG -boa"/>
+    <IDLCFLAGS value="-src_suffix cpp -D_DEBUG -Iresources\units -I$(BCB)\include 
+      -I$(BCB)\include\vcl -boa"/>
     <CFLAG1 value="-H=$(BCB)\lib\vcl60.csm -Hc -Vx -Ve -X- -r- -a8 -b- -k -y -v -vi- -c -tW 
       -tWM"/>
     <PFLAGS value="-$YD -$W -$O- -$A8 -v -JPHNE -M"/>
@@ -141,5 +141,10 @@ LinkCGLIB=0
 AddServerUnit=1
 AddClientUnit=1
 PrecompiledHeaders=1
+
+[Language]
+ActiveLang=
+ProjectLang=
+RootDir=
   </IDEOPTIONS>
 </PROJECT>
