@@ -357,15 +357,15 @@ void __fastcall TForm1::FormCreate(TObject *Sender)
     StringGrid9->Cells[1][9]=2400;
     StringGrid9->Cells[1][10]=3000;
     StringGrid9->Cells[1][11]=4000;
-    StringGrid9->Cells[3][3]="100";
-    StringGrid9->Cells[3][4]="200";
-    StringGrid9->Cells[3][5]="300";
-    StringGrid9->Cells[3][6]="300";
-    StringGrid9->Cells[3][7]="400";
-    StringGrid9->Cells[3][8]="400";
-    StringGrid9->Cells[3][9]="400";
-    StringGrid9->Cells[3][10]="500";
-    StringGrid9->Cells[3][11]="500";
+    StringGrid9->Cells[3][3]="1,00";
+    StringGrid9->Cells[3][4]="2,00";
+    StringGrid9->Cells[3][5]="3,00";
+    StringGrid9->Cells[3][6]="3,00";
+    StringGrid9->Cells[3][7]="4,00";
+    StringGrid9->Cells[3][8]="4,00";
+    StringGrid9->Cells[3][9]="4,00";
+    StringGrid9->Cells[3][10]="5,00";
+    StringGrid9->Cells[3][11]="5,00";
 
 
     StringGrid10->Cells[0][0]="delta Ha";
@@ -500,7 +500,7 @@ void __fastcall TForm1::Button4Click(TObject *Sender)
 
 
 
-    int table_4_col_3[9] = {100, 200, 300, 300, 400, 400, 400, 500, 500};
+    float table_4_col_3[9] = {1.00, 2.00, 3.00, 3.00, 4.00, 4.00, 4.00, 5.00, 5.00};
     int table_4_col_1[10] = {0, 200, 400, 800, 1200, 1600, 2000, 2400, 3000, 4000};
     float table_4[19][15] =
     {                                                 
@@ -621,7 +621,7 @@ void __fastcall TForm1::Button4Click(TObject *Sender)
     //   2 алгоритм
     Ho = StrToFloat(Form1->StringGrid6->Cells[2][1]);
     to = StrToFloat(Form1->StringGrid6->Cells[2][2]);
-    alpha_wo = StrToFloat(Form1->StringGrid6->Cells[2][3])*100;
+    alpha_wo = StrToFloat(Form1->StringGrid6->Cells[2][3]);
     Wo = StrToFloat(Form1->StringGrid6->Cells[2][4]);
     hmc = StrToFloat(Form1->StringGrid6->Cells[2][5]);
 
@@ -1361,6 +1361,183 @@ void __fastcall TForm1::Save1Click(TObject *Sender)
     file99<<temps.c_str()<<endl; ("parameters\\current_f(Mtau).txt");
 
     file99<<"</table>"<<endl;
+
+    //Вывод таблици превышений
+    String zarad = StringGrid5->Cells[4][5];
+    int row;
+    int col;
+    float *table_coef_row_one;
+    float *table_coef_col_one;
+    float **table_coef;
+
+    if(zarad == "д"){
+
+        row = 10;
+        col = 25;
+        table_coef_row_one = new float[row];
+        table_coef_col_one = new float[col];
+        table_coef = new float*[col];
+        for(int i = 0; i < col; ++i)
+                table_coef[i] = new float[row];
+
+        float row_t[10] = {50, 100, 150, 200, 250, 300, 350, 400, 450, 500};
+        float col_t[25] = {2530, 2600, 2800, 3000, 3200, 3400, 3600, 3800, 4000, 4200, 4400, 4600, 4800, 5000, 5200, 5400, 5600, 5800, 6000, 6200, 6400, 6600, 6800, 7000, 7188};
+        float tabl[25][10] = {
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {1, 1, 2, 2, 2, 3, 3, 4, 4, 5},
+        {1, 1, 2, 2, 3, 3, 4, 4, 5, 5},
+        {1, 1, 2, 2, 3, 4, 4, 5, 5, 6},
+        {1, 1, 2, 3, 3, 4, 4, 5, 6, 6},
+        {1, 1, 2, 3, 4, 4, 5, 5, 6, 7},
+        {1, 2, 2, 3, 4, 4, 5, 6, 7, 7},
+        {1, 2, 3, 3, 4, 5, 6, 6, 7, 8},
+        {1, 2, 3, 4, 4, 5, 6, 7, 8, 9},
+        {1, 2, 3, 4, 5, 6, 7, 8, 9, 9},
+        {1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
+        {1, 2, 4, 5, 6, 7, 8, 9, 10, 11},
+        {1, 3, 4, 5, 6, 8, 9, 10, 11, 12},
+        {1, 3, 4, 6, 7, 8, 10, 11, 12, 13},
+        {2, 3, 5, 6, 8, 9, 11, 12, 13, 15},
+        {2, 3, 5, 7, 8, 10, 12, 13, 15, 16},
+        {2, 4, 6, 7, 9, 11, 13, 15, 16, 18},
+        {2, 4, 6, 8, 10, 12, 14, 16, 18, 20},
+        {3, 5, 7, 10, 12, 14, 16, 18, 20, 22},
+        {3, 6, 9, 11, 14, 16, 19, 21, 23, 26},
+        {3, 7, 10, 13, 16, 19, 22, 25, 27, 30},
+        {4, 8, 12, 16, 20, 23, 26, 30, 33, 36},
+        {6, 11, 16, 21, 25, 30, 34, 38, 41, 45},
+        {9, 17, 24, 30, 36, 42, 48, 53, 57, 62},
+        {52, 71, 85, 97, 107, 116, 124, 131, 138, 144}
+    };
+
+    for(int i=0; i < row; i++) {
+      table_coef_row_one[i] = row_t[i];
+    }
+    for(int i=0; i < col; i++) {
+      table_coef_col_one[i] = col_t[i];
+    }
+    for(int i=0; i < col; i++) {
+        for(int j=0; j < row; j++) {
+        table_coef[i][j] = tabl[i][j];
+      }
+    }
+    } else if(zarad == "6"){
+
+        row = 10;
+        col = 21;
+        table_coef_row_one = new float[row];
+        table_coef_col_one = new float[col];
+        table_coef = new float*[col];
+        for(int i = 0; i < col; ++i)
+                table_coef[i] = new float[row];
+
+        float row_t[10] = {50, 100, 150, 200, 250, 300, 350, 400, 450, 500};
+        float col_t[21] = {2004, 2200, 2400, 2600, 2800, 3000, 3200, 3400, 3600, 3800, 4000, 4200, 4400, 4600, 4800, 5000, 5200, 5400, 5600, 5800, 5840};
+        float tabl[21][10] = {
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {1, 1, 2, 3, 3, 4, 5, 5, 6, 7},
+        {1, 2, 2, 3, 4, 5, 5, 6, 7, 7},
+        {1, 2, 3, 3, 4, 5, 6, 7, 7, 8},
+        {1, 2, 3, 4, 5, 6, 7, 7, 8, 9},
+        {1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
+        {1, 2, 4, 5, 6, 7, 8, 9, 10, 11},
+        {1, 3, 4, 5, 6, 8, 9, 10, 11, 12},
+        {1, 3, 4, 6, 7, 8, 10, 11, 12, 13},
+        {2, 3, 5, 6, 8, 9, 11, 12, 14, 15},
+        {2, 4, 5, 7, 9, 11, 12, 14, 15, 17},
+        {2, 4, 6, 8, 10, 12, 14, 15, 17, 19},
+        {2, 5, 7, 9, 11, 13, 15, 17, 19, 21},
+        {3, 5, 8, 11, 13, 15, 17, 20, 22, 24},
+        {3, 6, 9, 12, 15, 17, 20, 23, 25, 27},
+        {4, 7, 11, 14, 17, 20, 23, 26, 29, 32},
+        {5, 9, 13, 17, 21, 24, 28, 32, 35, 38},
+        {6, 12, 17, 22, 27, 31, 35, 39, 43, 47},
+        {9, 17, 24, 31, 37, 43, 48, 53, 58, 63},
+        {20, 36, 48, 59, 68, 77, 85, 92, 99, 105},
+        {54, 75, 90, 103, 114, 123, 132, 140, 147, 154},
+    };
+
+    for(int i=0; i < row; i++) {
+      table_coef_row_one[i] = row_t[i];
+    }
+    for(int i=0; i < col; i++) {
+      table_coef_col_one[i] = col_t[i];
+    }
+    for(int i=0; i < col; i++) {
+        for(int j=0; j < row; j++) {
+        table_coef[i][j] = tabl[i][j];
+      }
+    }
+    }   else if(zarad == "5"){
+        row = 10;
+        col = 20;
+        table_coef_row_one = new float[row];
+        table_coef_col_one = new float[col];
+        table_coef = new float*[col];
+        for(int i = 0; i < col; ++i)
+                table_coef[i] = new float[row];
+
+        float row_t[10] = {50, 100, 150, 200, 250, 300, 350, 400, 450, 500};
+        float col_t[20] = {2004, 2200, 2400, 2800, 3000, 3200, 3400, 3600, 3800, 4000, 4200, 4400, 4600, 4800, 5000, 5200, 5400, 5600, 5800, 5840};
+        float tabl[20][10] = {
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {1, 2, 2, 3, 4, 5, 5, 6, 7, 7},
+        {1, 2, 3, 4, 4, 5, 6, 7, 8, 8},
+        {1, 2, 3, 4, 5, 6, 7, 8, 9, 9},
+        {1, 2, 3, 4, 6, 7, 8, 9, 10, 11},
+        {1, 2, 4, 5, 6, 7, 8, 10, 11, 12},
+        {1, 3, 4, 6, 7, 8, 10, 11, 12, 13},
+        {2, 3, 5, 6, 8, 9, 11, 12, 13, 15},
+        {2, 4, 5, 7, 9, 10, 12, 14, 15, 17},
+        {2, 4, 6, 8, 10, 12, 14, 15, 17, 19},
+        {2, 5, 7, 9, 11, 14, 16, 17, 19, 21},
+        {3, 5, 8, 10, 13, 16, 18, 20, 22, 24},
+        {3, 6, 9, 12, 15, 18, 21, 23, 26, 28},
+        {4, 7, 11, 15, 18, 21, 24, 27, 30, 33},
+        {5, 9, 14, 18, 22, 26, 29, 33, 36, 40},
+        {6, 12, 18, 23, 28, 33, 37, 41, 46, 50},
+        {9, 18, 26, 33, 39, 45, 51, 57, 62, 67},
+        {22, 39, 52, 64, 74, 83, 91, 99, 106, 112},
+        {61, 84, 101, 115, 127, 137, 146, 154, 162, 169},
+        };
+
+    for(int i=0; i < row; i++) {
+      table_coef_row_one[i] = row_t[i];
+    }
+    for(int i=0; i < col; i++) {
+      table_coef_col_one[i] = col_t[i];
+    }
+    for(int i=0; i < col; i++) {
+        for(int j=0; j < row; j++) {
+        table_coef[i][j] = tabl[i][j];
+      }
+    }
+    }
+
+    //-----------------------
+
+    file99<<"<center><h3>Таблица превышений</h3></center>"<<endl;
+    file99<<"<table align='center' border=1>"<<endl;
+    file99<<"<tr>"<<endl;
+    file99<<"<td><h4></h4></td>"<<endl;
+    for(int i=0;i<col;i++){
+      file99<<"<td><h4>"<<table_coef_col_one[i]<<"</h4></td>"<<endl;
+    }
+    file99<<"</tr>"<<endl;
+    for(int i=0;i<row;i++){
+        file99<<"<tr>"<<endl;
+        file99<<"<td><h4>"<<table_coef_row_one[i]<<"</h4></td>"<<endl;
+        for(int j=0;j<col;j++){
+                file99<<"<td>"<<table_coef[j][i]<<"</td>"<<endl;
+        }
+        file99<<"</tr>"<<endl;
+    }
+    file99<<"</table>"<<endl;
+    file99<<"<br>"<<endl;
+    file99<<"<br>"<<endl;
+
+
+  //--------------------
 
     file99<<"<center><h3>Табл. В Вирахувані дані по цілі</h3></center>"<<endl;
     file99<<"<table align='center' border=1>"<<endl;

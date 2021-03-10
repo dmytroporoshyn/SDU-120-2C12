@@ -754,6 +754,10 @@ for(int i=0;i<9;++i){
         }
     }
 
+    if(temp+2 > 11){
+       temp = 9;
+    }
+
     if(alpha_c*100>=StrToFloat(StringGrid9->Cells[4][2+temp])){
         Aw = alpha_c * 100 - StrToFloat(StringGrid9->Cells[4][2+temp]);
     }else if(alpha_c*100<StrToFloat(StringGrid9->Cells[4][2+temp])){

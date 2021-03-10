@@ -1,6 +1,6 @@
 object Form1: TForm1
-  Left = 92
-  Top = 178
+  Left = 31
+  Top = 155
   Width = 1777
   Height = 752
   Caption = 'WarZone Shooting Tables - Mass Center'
@@ -266,7 +266,7 @@ object Form1: TForm1
       object GroupBox3: TGroupBox
         Left = 0
         Top = 305
-        Width = 1669
+        Width = 1753
         Height = 380
         Align = alClient
         Caption = #1055#1086#1087#1088#1072#1074#1086#1095#1085#1099#1077' '#1075#1088#1072#1092#1099
@@ -274,7 +274,7 @@ object Form1: TForm1
         object StringGrid4: TStringGrid
           Left = 2
           Top = 15
-          Width = 1665
+          Width = 1749
           Height = 363
           Align = alClient
           ColCount = 11
@@ -289,7 +289,7 @@ object Form1: TForm1
       object GroupBox5: TGroupBox
         Left = 0
         Top = 0
-        Width = 1669
+        Width = 1753
         Height = 57
         Align = alTop
         Caption = #1056#1072#1089#1095#1105#1090#1085#1099#1077' '#1076#1072#1085#1085#1099#1077
@@ -326,7 +326,7 @@ object Form1: TForm1
       object GroupBox4: TGroupBox
         Left = 0
         Top = 57
-        Width = 1669
+        Width = 1753
         Height = 248
         Align = alTop
         Caption = #1058#1072#1073#1083#1080#1095#1085#1072#1103' '#1090#1088#1072#1077#1082#1090#1086#1088#1080#1103
@@ -334,7 +334,7 @@ object Form1: TForm1
         object StringGrid3: TStringGrid
           Left = 2
           Top = 15
-          Width = 1665
+          Width = 1749
           Height = 231
           Align = alClient
           ColCount = 6

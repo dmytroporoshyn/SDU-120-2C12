@@ -1,6 +1,6 @@
 object Form1: TForm1
-  Left = 31
-  Top = 155
+  Left = 498
+  Top = 180
   Width = 1777
   Height = 752
   Caption = 'WarZone Shooting Tables - Mass Center'

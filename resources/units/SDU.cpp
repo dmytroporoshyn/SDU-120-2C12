@@ -636,7 +636,7 @@ void TSDUSolver::calculate(bool autoFindCoefFormy)
     setdefault();
     SLV.Wx=Wx;
 	SLV.solve();
-    dXw=(-SLV.xe+Xt)*0.8;
+    dXw=(-SLV.xe+Xt)*1.31;
     Xr+=dXw;
 
     //расчёт dXh
@@ -686,9 +686,9 @@ void TSDUSolver::calculate(bool autoFindCoefFormy)
     setdefault();
     SLV.Wz=Wz;
 	SLV.solve();
-    dZw=-(0-SLV.ze)/(0.001*SLV.xe)*0.8;
+    dZw=-(0-SLV.ze)/(0.001*SLV.xe)*1.31;
     Zr+=dZw*Xt/1000*0.95;
-    
+
     
     //расчёт dXvr
     setdefault();
