@@ -627,6 +627,7 @@ object Form1: TForm1
         Height = 57
         ColCount = 7
         RowCount = 2
+        Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goEditing]
         TabOrder = 6
       end
       object StringGrid12: TStringGrid
