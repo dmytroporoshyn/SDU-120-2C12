@@ -398,25 +398,25 @@ void __fastcall TForm1::FormCreate(TObject *Sender)
 
 
     StringGrid11->Cells[1][1]=-0.7;
-    StringGrid11->Cells[2][1]=-16;
-    StringGrid11->Cells[3][1]=3;
+    StringGrid11->Cells[2][1]=-4;
+    StringGrid11->Cells[3][1]=-3;
 
-    StringGrid5->Cells[4][1]=37235;
-    StringGrid5->Cells[4][2]=94830;
-    StringGrid5->Cells[4][3]=180;
-    StringGrid5->Cells[4][4]="52,00";
+    StringGrid5->Cells[4][1]=37310;
+    StringGrid5->Cells[4][2]=94720;
+    StringGrid5->Cells[4][3]=170;
+    StringGrid5->Cells[4][4]="54,00";
     StringGrid5->Cells[4][5]="ä";
 
-    StringGrid6->Cells[2][1]=783;
-    StringGrid6->Cells[2][2]=-24;
-    StringGrid6->Cells[2][3]="1,00";
-    StringGrid6->Cells[2][4]=5;
-    StringGrid6->Cells[2][5]=200;
+    StringGrid6->Cells[2][1]=745;
+    StringGrid6->Cells[2][2]=-3;
+    StringGrid6->Cells[2][3]="5,00";
+    StringGrid6->Cells[2][4]=11;
+    StringGrid6->Cells[2][5]=150;
 
-    StringGrid7->Cells[2][1]=40150;
-    StringGrid7->Cells[2][2]=93200;
+    StringGrid7->Cells[2][1]=39510;
+    StringGrid7->Cells[2][2]=92750;
     StringGrid7->Cells[2][3]=190;
-    StringGrid7->Cells[2][4]=1000;
+    //StringGrid7->Cells[2][4]=1000;
 
 
     
@@ -660,11 +660,36 @@ void __fastcall TForm1::Button4Click(TObject *Sender)
     StringGrid8->Cells[8][2]=((float)(int)(delta_tau_0mp * 100 + 0.5)) / 100;
     // Y = ( ( X - X0 )*( Y1 - Y0) / ( X1 - X0) ) + Y0
 
-    StringGrid8->Cells[8][2] = floor(StrToFloat(StringGrid8->Cells[8][2]));
-    StringGrid9->Cells[2][2] = StringGrid8->Cells[8][2];
+    //StringGrid8->Cells[8][2] = floor(StrToFloat(StringGrid8->Cells[8][2]));
+    StringGrid9->Cells[2][2] = floor(StrToFloat(StringGrid8->Cells[8][2]));
 
-    int  count=0;
-        for(int i=0;i<19-1;++i){
+
+    float delta_t;
+    delta_t = StrToFloat(Form1->StringGrid9->Cells[2][2]);
+    int f1 = 0;
+    int f2 = 0;
+    if(delta_t < 0){
+        f1 =  (int) (delta_t / 10) * -1;
+        f2 =  (int) (-1 * delta_t - f1 * 10);
+    } else {
+        f1 =  (int) (delta_t / 10);
+        f2 =  (int) (delta_t - f1 * 10);
+    }
+
+    int des = 8 + f1;
+    int odn = -1 + f2;
+
+    int  count = 1;
+    for(int i=0;i<9;++i){
+       if(delta_t < 0){
+                StringGrid9->Cells[2][2+count] = table_4_minus[i][des] + table_4_minus[i][odn];
+       } else {
+                StringGrid9->Cells[2][2+count] = table_4_plus[i][des] + table_4_plus[i][odn];
+       }
+       count++;
+    }
+
+/*           for(int i=0;i<19-1;++i){
         float local_delta_tau_0mp;
         if (delta_tau_0mp < 0){
             //local_delta_tau_0mp = (delta_tau_0mp-StrToFloat(StringGrid9->Cells[3][3+count])) * -1;
@@ -682,7 +707,7 @@ void __fastcall TForm1::Button4Click(TObject *Sender)
         }
         count++;
         StringGrid9->Cells[2][2+count]=floor(delta_tau_y+0.5);
-    }
+    }  */
     delta_tau_0mp = floor(delta_tau_0mp);
     int trp=0;
     count=0;
@@ -758,10 +783,11 @@ for(int i=0;i<9;++i){
        temp = 9;
     }
 
+    float num = StrToFloat(StringGrid9->Cells[4][2+temp]) * 100;
     if(alpha_c*100>=StrToFloat(StringGrid9->Cells[4][2+temp])){
-        Aw = alpha_c * 100 - StrToFloat(StringGrid9->Cells[4][2+temp]);
+        Aw = alpha_c * 100 - num;
     }else if(alpha_c*100<StrToFloat(StringGrid9->Cells[4][2+temp])){
-        Aw = alpha_c * 100 + 60 - StrToFloat(StringGrid9->Cells[4][2+temp]);
+        Aw = alpha_c * 100 + 60 - num;
     }
     /*ofstream foutf;
     foutf.open("log.txt");
@@ -771,15 +797,17 @@ for(int i=0;i<9;++i){
     Aw_grad = (Aw*3.6)/60;
     Aw_grad = floor(Aw_grad+0.5);
 
-    Wx = -1 * StrToFloat(StringGrid9->Cells[5][2+temp]) * cos(Aw_grad*3.14/180);
-    Wz = StrToFloat(StringGrid9->Cells[5][2+temp]) * sin(Aw_grad*3.14/180);
+    Wx = -1 * StrToFloat(StringGrid9->Cells[5][2+temp]) * cos(Aw_grad*3.1415926/180);
+    Wz = StrToFloat(StringGrid9->Cells[5][2+temp]) * sin(Aw_grad*3.1415926/180);
     float tds = StrToFloat(StringGrid9->Cells[5][2+temp]);
 
 
     StringGrid10->Cells[0][1]=delta_Hb;
     StringGrid10->Cells[1][1]=StringGrid9->Cells[2][2+temp];
-    StringGrid10->Cells[2][1]=floor(Wx+0.5);
-    StringGrid10->Cells[3][1]=floor(Wz+0.5);
+    Wx = floor(Wx * 100);
+    Wz = floor(Wz * 100);
+    StringGrid10->Cells[2][1]=Wx / 100;
+    StringGrid10->Cells[3][1]=Wz / 100;
 
 
     //end of code
@@ -1771,15 +1799,15 @@ float **table_coef;
     Dsum = (0.1 * deltaXw * Wx) + (0.1 * deltaXh * delta_Hb) + (0.1 * deltaXt * delta_tauY) + (0.1 * deltaXtz * deltaTz) + (deltaXvo * deltaVo) + (deltaXq * deltaQ);
     Dsum = floor(Dsum+0.5);
     deltaZw = StrToFloat(StringGrid4->Cells[5][temp2-1]);
-    deltaDsum = 0.1 * deltaZw * Wz;
-    deltaDsum = floor(deltaDsum+0.5);
+    deltaDsum = -4.1 * Wz;
+    //deltaDsum = floor(deltaDsum+0.5);
     D_c_t = StrToFloat(StringGrid7->Cells[2][4]);
     Zp=(deltaDsum*D_c_t)/955;
     Zp = floor(Zp+0.5);
     Xp=D_c_t+Dsum;
     delta_c_t = StrToFloat(StringGrid7->Cells[2][5]);
     D_c_v = delta_c_t + deltaDsum/100;
-    D_c_v = ((float)(int)(D_c_v * 100)) / 100;
+    D_c_v = floor(D_c_v * 100);
     int i;
     float Tetav_1,Tetav_2;
     for(i=1;i<(StringGrid1->RowCount)-1;++i){
@@ -1805,7 +1833,8 @@ float **table_coef;
     Tetav_grad = floor((Tatav_1_min-tdmp2)/60);
     Tetav_min = (Tatav_1_min-(Tetav_grad*60))-tdmp2;
 
-    Pr_tys = (Tetav_grad * 60 + Tetav_min)/3.6;
+    Pr_tys = (Tetav_1 * 60)/3.6;
+    //Pr_tys = (Tetav_grad * 60 + Tetav_min)/3.6;
     Pr_tys = floor(Pr_tys+0.5);
     Pr_dol = (1500 - Pr_tys) + 250;
     StringGrid12->Cells[2][1] = Pr_tys;
@@ -1845,7 +1874,7 @@ float **table_coef;
         }
 
     //delta_P_h = floor(delta_P_h+0.5);
-    P_v_r = Pr_dol + delta_P_h;
+    P_v_r = Pr_dol + Kph;
     P_v_r = floor(P_v_r+0.5);
         delta_h_c = StrToFloat(StringGrid7->Cells[2][5])+delta_d_sum;
     //Tetav_1
@@ -1853,7 +1882,7 @@ float **table_coef;
     //grad* (pi/180)
     //180/pi*rad
     StringGrid12->Cells[0][1] = P_v_r;
-    StringGrid12->Cells[1][1] = D_c_v;
+    StringGrid12->Cells[1][1] = D_c_v  / 100;
     StringGrid12->Cells[2][1] = Xp;
     StringGrid12->Cells[3][1] = Zp;
 
