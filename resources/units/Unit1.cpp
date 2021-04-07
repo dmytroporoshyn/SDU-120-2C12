@@ -546,7 +546,7 @@ void __fastcall TForm1::Button4Click(TObject *Sender)
         {-1, -2, -3, -4, -5, -6, -6, -7, -8, -9, -19, -29, -38, -48},
         {-1, -2, -3, -4, -5, -6, -6, -7, -7, -8, -18, -28, -37, -46},
         {-1, -2, -3, -4, -4, -5, -5, -6, -7, -8, -17, -26, -35, -44},
-        {-1, -2, -3, -3, -4, -4, -5, -6, -7, -8, -17, -25, -34, -42},
+        {-1, -2, -3, -3, -4, -4, -5, -6, -7, -7, -17, -25, -34, -42},
         {-1, -2, -3, -3, -4, -4, -5, -6, -6, -7, -16, -24, -32, -40},
         {-1, -2, -2, -3, -4, -4, -5, -5, -6, -7, -15, -23, -31, -38},
         {-1, -2, -2, -3, -4, -4, -4, -5, -5, -6, -15, -22, -30, -37},
@@ -1799,7 +1799,7 @@ float **table_coef;
     Dsum = (0.1 * deltaXw * Wx) + (0.1 * deltaXh * delta_Hb) + (0.1 * deltaXt * delta_tauY) + (0.1 * deltaXtz * deltaTz) + (deltaXvo * deltaVo) + (deltaXq * deltaQ);
     Dsum = floor(Dsum+0.5);
     deltaZw = StrToFloat(StringGrid4->Cells[5][temp2-1]);
-    deltaDsum = -4.1 * Wz;
+    deltaDsum = 0.1 * deltaXvo * Wz;
     //deltaDsum = floor(deltaDsum+0.5);
     D_c_t = StrToFloat(StringGrid7->Cells[2][4]);
     Zp=(deltaDsum*D_c_t)/955;
@@ -1844,7 +1844,7 @@ float **table_coef;
     float delta_h_c, Kph = 0, delta_P_h,P_v_r,delta_d_sum;
 
     delta_d_sum = (Zp*955)/D_c_t;
-    delta_h_c = StrToFloat(StringGrid7->Cells[2][7]);
+    delta_h_c = abs(StrToFloat(StringGrid7->Cells[2][7]));
     for(i=0;i<row-1;++i){
         if (table_coef_row_one[i] <= delta_h_c && table_coef_row_one[i+1] >= delta_h_c){
             j = i+1;
