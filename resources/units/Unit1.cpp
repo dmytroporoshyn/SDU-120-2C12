@@ -382,6 +382,8 @@ void __fastcall TForm1::FormCreate(TObject *Sender)
     StringGrid12->Cells[6][0]="delta_P_h";
     StringGrid12->Cells[7][0]="teta,grad";
     StringGrid12->Cells[8][0]="teta,min";
+    StringGrid12->Cells[9][0]="D,сум";
+    StringGrid12->Cells[10][0]="delta d, сум";
 
 
     StringGrid8->Cells[2][1]=750;
@@ -1399,7 +1401,6 @@ void __fastcall TForm1::Save1Click(TObject *Sender)
     float **table_coef;
 
     if(zarad == "д"){
-
         row = 10;
         col = 25;
         table_coef_row_one = new float[row];
@@ -1527,6 +1528,44 @@ void __fastcall TForm1::Save1Click(TObject *Sender)
         {9, 18, 26, 33, 39, 45, 51, 57, 62, 67},
         {22, 39, 52, 64, 74, 83, 91, 99, 106, 112},
         {61, 84, 101, 115, 127, 137, 146, 154, 162, 169},
+        };
+
+    for(int i=0; i < row; i++) {
+      table_coef_row_one[i] = row_t[i];
+    }
+    for(int i=0; i < col; i++) {
+      table_coef_col_one[i] = col_t[i];
+    }
+    for(int i=0; i < col; i++) {
+        for(int j=0; j < row; j++) {
+        table_coef[i][j] = tabl[i][j];
+      }
+    }
+    } else if(zarad == "3"){
+        row = 10;
+        col = 13;
+        table_coef_row_one = new float[row];
+        table_coef_col_one = new float[col];
+        table_coef = new float*[col];
+        for(int i = 0; i < col; ++i)
+                table_coef[i] = new float[row];
+
+        float row_t[10] = {50, 100, 150, 200, 250, 300, 350, 400, 450, 500};
+        float col_t[13] = {1123, 1200, 1400, 1600, 1800, 2000, 2200, 2400, 2600, 2800, 3000, 3200, 3292};
+        float tabl[13][10] = {
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {1, 3, 4, 5, 6, 7, 8, 9, 10, 11},
+        {2, 3, 5, 6, 7, 9, 10, 11, 12, 14},
+        {2, 4, 6, 7, 9, 11, 12, 14, 15, 17},
+        {2, 4, 7, 9, 11, 13, 14, 16, 18, 20},
+        {3, 5, 8, 10, 13, 15, 17, 19, 21, 23},
+        {3, 6, 9, 12, 15, 18, 21, 23, 25, 27},
+        {4, 8, 12, 15, 18, 22, 25, 28, 31, 33},
+        {5, 10, 15, 19, 23, 27, 31, 35, 38, 41},
+        {7, 13, 19, 24, 30, 35, 40, 44, 48, 52},
+        {10, 19, 27, 34, 41, 48, 54, 59, 65, 70},
+        {19, 36, 49, 60, 70, 79, 88, 96, 103, 110},
+        {75, 103, 123, 139, 152, 164, 175, 185, 194, 201}
         };
 
     for(int i=0; i < row; i++) {
@@ -1768,7 +1807,46 @@ float **table_coef;
         table_coef[i][j] = tabl[i][j];
       }
     }
+    } else if(zarad == "3"){
+        row = 10;
+        col = 13;
+        table_coef_row_one = new float[row];
+        table_coef_col_one = new float[col];
+        table_coef = new float*[col];
+        for(int i = 0; i < col; ++i)
+                table_coef[i] = new float[row];
+
+        float row_t[10] = {50, 100, 150, 200, 250, 300, 350, 400, 450, 500};
+        float col_t[13] = {1123, 1200, 1400, 1600, 1800, 2000, 2200, 2400, 2600, 2800, 3000, 3200, 3292};
+        float tabl[13][10] = {
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {1, 3, 4, 5, 6, 7, 8, 9, 10, 11},
+        {2, 3, 5, 6, 7, 9, 10, 11, 12, 14},
+        {2, 4, 6, 7, 9, 11, 12, 14, 15, 17},
+        {2, 4, 7, 9, 11, 13, 14, 16, 18, 20},
+        {3, 5, 8, 10, 13, 15, 17, 19, 21, 23},
+        {3, 6, 9, 12, 15, 18, 21, 23, 25, 27},
+        {4, 8, 12, 15, 18, 22, 25, 28, 31, 33},
+        {5, 10, 15, 19, 23, 27, 31, 35, 38, 41},
+        {7, 13, 19, 24, 30, 35, 40, 44, 48, 52},
+        {10, 19, 27, 34, 41, 48, 54, 59, 65, 70},
+        {19, 36, 49, 60, 70, 79, 88, 96, 103, 110},
+        {75, 103, 123, 139, 152, 164, 175, 185, 194, 201}
+        };
+
+    for(int i=0; i < row; i++) {
+      table_coef_row_one[i] = row_t[i];
     }
+    for(int i=0; i < col; i++) {
+      table_coef_col_one[i] = col_t[i];
+    }
+    for(int i=0; i < col; i++) {
+        for(int j=0; j < row; j++) {
+        table_coef[i][j] = tabl[i][j];
+      }
+    }
+    }
+    
     int temp2 = 2;
     float Wx, Wz, delta_Hb, D_c_t, delta_c_t, Xp,Zp,Dsum,deltaXw,deltaXh,deltaXt,delta_tauY,deltaXtz,deltaTz,deltaXvo,deltaVo,deltaXq,deltaQ,deltaDsum,deltaZw,D_c_v,Pr_tys,Pr_dol;
     String a = StringGrid7->Cells[2][4];
@@ -1787,7 +1865,7 @@ float **table_coef;
     Wz = StrToFloat(StringGrid10->Cells[3][1]);
     delta_Hb = StrToFloat(StringGrid10->Cells[0][1]);
     delta_tauY = StrToFloat(StringGrid10->Cells[1][1]);
-    deltaXw = StrToFloat(StringGrid4->Cells[6][temp2-1]);
+    deltaXw = StrToFloat(StringGrid4->Cells[5][temp2-1]);
     deltaXh = StrToFloat(StringGrid4->Cells[7][temp2-1]);
     deltaXt = StrToFloat(StringGrid4->Cells[8][temp2-1]);
     deltaXtz = StrToFloat(StringGrid4->Cells[9][temp2-1]);
@@ -1795,12 +1873,13 @@ float **table_coef;
     deltaXvo = StrToFloat(StringGrid4->Cells[10][temp2-1]);
     deltaVo = StrToFloat(StringGrid11->Cells[1][1]);
     deltaXq = StrToFloat(StringGrid4->Cells[11][temp2-1]);
+    float deltaZww = StrToFloat(StringGrid4->Cells[12][temp2-1]);
     deltaQ = StrToFloat(StringGrid11->Cells[3][1]);
     Dsum = (0.1 * deltaXw * Wx) + (0.1 * deltaXh * delta_Hb) + (0.1 * deltaXt * delta_tauY) + (0.1 * deltaXtz * deltaTz) + (deltaXvo * deltaVo) + (deltaXq * deltaQ);
     Dsum = floor(Dsum+0.5);
     deltaZw = StrToFloat(StringGrid4->Cells[5][temp2-1]);
-    deltaDsum = 0.1 * deltaXvo * Wz;
-    //deltaDsum = floor(deltaDsum+0.5);
+    deltaDsum = 0.1 * deltaZww * Wz;
+    deltaDsum = floor(deltaDsum+0.5);
     D_c_t = StrToFloat(StringGrid7->Cells[2][4]);
     Zp=(deltaDsum*D_c_t)/955;
     Zp = floor(Zp+0.5);
@@ -1833,14 +1912,15 @@ float **table_coef;
     Tetav_grad = floor((Tatav_1_min-tdmp2)/60);
     Tetav_min = (Tatav_1_min-(Tetav_grad*60))-tdmp2;
 
-    Pr_tys = (Tetav_1 * 60)/3.6;
-    //Pr_tys = (Tetav_grad * 60 + Tetav_min)/3.6;
+    Pr_tys = (Tetav_grad * 60 + Tetav_min)/3.6;
     Pr_tys = floor(Pr_tys+0.5);
     Pr_dol = (1500 - Pr_tys) + 250;
+    Pr_dol = floor(Pr_dol+0.5);
     StringGrid12->Cells[2][1] = Pr_tys;
     StringGrid12->Cells[1][1] = Pr_dol;
     StringGrid12->Cells[0][1] = round(Tetav_1*10)/10;
-    int j=0;
+    int j = 0;
+    int y = 0;
     float delta_h_c, Kph = 0, delta_P_h,P_v_r,delta_d_sum;
 
     delta_d_sum = (Zp*955)/D_c_t;
@@ -1854,29 +1934,32 @@ float **table_coef;
 
     for(i=0;i<col-1;++i){
         if (table_coef_col_one[i] <= Xp && table_coef_col_one[i+1] >= Xp){
-            Kph = table_coef[i+1][j];
+            y = i+1;
+            Kph = table_coef[y][j];
             break;
         }
     }
 
-/*    for(i=0;i<24;++i){
-        if (table_coef_col_one[i] <= Pr_dol && table_coef_col_one[i+1] >= Pr_dol){
-            Kph = table_coef[i+1][j];
-            break;
-        }
-    }*/
+    //»нтерпол€ци€ Kph
 
-    delta_P_h = 0.1 * Kph * delta_h_c;
-        if(delta_P_h < 0) {
-                delta_P_h = floor(delta_P_h);
-        } else {
-            delta_P_h = ceil(delta_P_h);
-        }
+    float x1;
+    float x2 = table_coef_row_one[j];
+    float fx1;
+    if(j == 0){
+      x1 = 0;
+      fx1 = 0;
+    } else {
+      x1 = table_coef_row_one[j - 1];
+      fx1 = table_coef[y][j - 1];
+    }
 
-    //delta_P_h = floor(delta_P_h+0.5);
-    P_v_r = Pr_dol + Kph;
+    float fx2 = table_coef[y][j];
+
+    float nKph = fx1 + (fx2 - fx1)/ (x2-x1) * (delta_h_c - x1);
+
+    P_v_r = Pr_dol + floor(nKph);
     P_v_r = floor(P_v_r+0.5);
-        delta_h_c = StrToFloat(StringGrid7->Cells[2][5])+delta_d_sum;
+    delta_h_c = StrToFloat(StringGrid7->Cells[2][5])+delta_d_sum;
     //Tetav_1
     //1 ' = 0.00029088820866572 rad
     //grad* (pi/180)
@@ -1888,9 +1971,11 @@ float **table_coef;
 
     StringGrid12->Cells[4][1] = Pr_tys;
     StringGrid12->Cells[5][1] = Pr_dol;
-    StringGrid12->Cells[6][1] = delta_P_h;
+    StringGrid12->Cells[6][1] = nKph;
     StringGrid12->Cells[7][1] = Tetav_grad;
     StringGrid12->Cells[8][1] = Tetav_min;
+    StringGrid12->Cells[9][1] = Dsum;
+    StringGrid12->Cells[10][1] = deltaDsum;
 }
 //---------------------------------------------------------------------------
 
